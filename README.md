@@ -13,6 +13,8 @@ Até o momento, já conseguimos desenvolver um código funcionar que recebe uma 
 #### A SER DESENVOLDIDO:
 
 #### INTERFACE (Front-end):
+![](interface.jpg)
+
 
 #### ANÁLISE (Back-end):
 Ainda é necessário fazer uma outra análise que realize o cálculo do fator de correção com base em outras tabelas na NBR. Também é preciso adicionar mais métodos de instalações e tipos de disjuntores que atuem em correntes e seções maiores. Além disso, no andamento das aulas, também é preciso estruturar melhor o back-end, comentá-lo e fazer uso de funções para deixar o código mais organizado.
