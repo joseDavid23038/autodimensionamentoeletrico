@@ -7,6 +7,7 @@ Nosso programa em si, é dividido em duas principais partes:
   - Interface: Será a face do nosso programa e a responsável por coletar os dados do esquema elétrico do usuário. Utilizaremos o software Kivy para criá-la. Pretendemos fazer uma interface acessível e intuitiva. 
   - Análise de dados: Usando as variáveis disponibilizadas pelo usuário, relacionará estas com a NBR5410. Esta comparação, nos indicará qual será o disjuntor e a seção transversal do condutor mais indicados para o tipo de instalação especificado. 
 
-INTERFACE (Front-end):
+#### INTERFACE (Front-end):
 
-ANÁLISE (Back-end):
+#### ANÁLISE (Back-end):
+De modo geral, 
