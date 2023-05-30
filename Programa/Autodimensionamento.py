@@ -1,7 +1,7 @@
 tabela_usada = "DOIS_COBRE_PVC.xlsx" 
 metodo = 'B1'
 bitolaMin = 2.5
-FT = 0.5
+FT = 0.5 
 P=1550
 V=220
 I = P/V
