@@ -13,7 +13,7 @@ Até o momento, já conseguimos desenvolver um código funcionar que recebe uma 
 #### A SER DESENVOLDIDO:
 
 #### INTERFACE (Front-end):
-![](interface.jpg)
+![image](https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194)
 
 
 #### ANÁLISE (Back-end):
