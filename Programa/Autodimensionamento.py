@@ -20,7 +20,6 @@ disjuntores = pd.read_excel("DISJUNTORES.xlsx")
 
 coluna_disjuntor = 'DISJUNTOR'
 linha_disjuntor = 0
-
 disjuntor = disjuntores.loc[linha_disjuntor][coluna_disjuntor]
 
 while float(disjuntor)<= I:
