@@ -17,7 +17,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 ''')
 botao_NEXT = st.button("?",type="primary")
 if botao_NEXT:
-  st.image("https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194")
+  st.write('Botãoes de interrogação "?", são usados como dica ou para melhor entendimento do que estiver sendo pedido')
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
