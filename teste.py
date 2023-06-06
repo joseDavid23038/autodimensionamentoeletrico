@@ -7,15 +7,8 @@ st.markdown('''
 # **FOFOS DA BITOLA** 
 #### APP para redimensionamento
 ''')
-arquivo = st.file_uploader("arquivo aqui"
-)
-if arquivo:
-  match arquivo.type.split("/"):
-    case "application", "json":
-      st.write("Aquivo Json ")
-    case "image", _:
-      st.write("Arquivo JPG")
-      st.image(arquivo)
+arquivo = st.file_uploader("arquivo aqui")
+st.write(arquivo.type)
 
 
 # Criando uma Barra Lateral 
