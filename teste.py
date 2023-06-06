@@ -4,12 +4,11 @@ import streamlit as st
 
 #Criando o titulo 
 st.markdown('''
-
 # **FOFOS DA BITOLA** 
-
-#### *APP para redimensionamento*
-
+#### APP para redimensionamento
 ''')
+arquivo = st.file_uploader("arquivo aqui"
+)
 
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
