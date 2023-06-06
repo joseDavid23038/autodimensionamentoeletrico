@@ -8,7 +8,7 @@ st.markdown('''
 #### APP para redimensionamento
 ''')
 arquivo = st.file_uploader("arquivo aqui")
-st.write(arquivo.type)
+print(arquivo.type)
 
 
 # Criando uma Barra Lateral 
