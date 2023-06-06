@@ -17,5 +17,5 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 st.sidebar.title("MENU")
 
 st.sidebar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
-st.button("B",type="primary")
+st.button("B",type="Red")
  
