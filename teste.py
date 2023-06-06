@@ -17,8 +17,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 ''')
 botao_NEXT = st.button("NEXT",type="primary")
 if botao_NEXT:
-  with st.expander("Clique aqui para expandir"):
-    st.write("Conteúdo do expander")
+  st.image('https://www.example.com/image.jpg', caption='Imagem de exemplo')
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
