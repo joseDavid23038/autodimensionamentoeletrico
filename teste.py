@@ -23,6 +23,9 @@ st.button("NEXT",type="primary")
 bar = st.sidebar
 
 bar.title("MENU")
-bar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
+
+barra_opcções = bar.selectbox(
+  "Ir para",
+  ["Pagina Inicial","Redimensionamento","Sobre o Projeto"])
 
 #____________________________________________________________________________________________________________________________________________________________________________
