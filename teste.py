@@ -6,7 +6,7 @@ from json import loads
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 st.markdown('''
 
- **Bem vindo**
+# **Bem vindo**
 ### Redimensionamento de Circuito Elétricos
 
 Essa aba é direcionada a armazenar as informações do seu circuito elétrico, na qual estas, serão usadas para encontrar o disjuntor e bitola ideal para o seu sistema.
