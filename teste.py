@@ -14,10 +14,12 @@ Essa aba é direcionada a armazenar as informações do seu circuito elétrico, 
 Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada por um profissional, nosso trabalho é encontrar uma escala de produto que satisfaça suas necessidades.
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
-''')	
-if st.button("NEXT",type="primary")
-  st.expander("Escolha")
-
+''')
+botao_NEXT = st.button("NEXT",type="primary")
+if botao:
+  with st.expander("Clique aqui para expandir"):
+    st.write("Conteúdo do expander")
+    
 #_____________________________________________________________________________________________________________________________________________________________________________
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
