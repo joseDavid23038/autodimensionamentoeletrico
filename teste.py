@@ -2,7 +2,7 @@
 import streamlit as st
 from json import loads
 
-
+sd.theme(dark)
 #Criando a Pagina Inicial
 st.markdown('''
 # **!! Bem vindo !!**
