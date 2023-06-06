@@ -3,10 +3,10 @@ import streamlit as st
 from json import loads
 
 
-#Criando o titulo 
+#Criando a Pagina Inicial
 st.markdown('''
-# **FOFOS DA BITOLA** 
-#### APP para redimensionamento
+# **Bem vindo**
+### Redimensionamneto de Circuito Elétricos 
 ''')
 arquivo = st.file_uploader("arquivo aqui")
 if arquivo:
