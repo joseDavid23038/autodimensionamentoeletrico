@@ -8,8 +8,11 @@ st.markdown('''
 #### APP para redimensionamento
 ''')
 arquivo = st.file_uploader("arquivo aqui")
-print(arquivo.type)
-
+if arquivo:
+  match arquivo.type.split("/"):
+    case "image", _:
+      st.write("Arquivo JPG")
+      st.image(arquivo)
 
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
