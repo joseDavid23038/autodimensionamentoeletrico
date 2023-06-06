@@ -18,3 +18,4 @@ st.sidebar.title("MENU")
 
 st.sidebar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
 st.button("B")
+  type"red"
