@@ -22,7 +22,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 ''')
 
 botao_NEXT = st.button('?', type="primary")
-while botao_NEXT:
+while botao_NEXT == TRUE:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
   
     
