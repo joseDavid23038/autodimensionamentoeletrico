@@ -7,7 +7,7 @@ st.markdown('''
 
 # **FOFOS DA BITOLA** 
 
-## *APP para redimensionamento*
+#### *APP para redimensionamento*
 
 ''')
 
