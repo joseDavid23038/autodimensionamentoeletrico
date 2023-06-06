@@ -1,2 +1,2 @@
-import steamlit as sd
+import streamlit as sd
 sd.sidebar.title("MENU")
