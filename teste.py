@@ -24,7 +24,8 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 botao_NEXT = st.button('?', type="primary")
 if botao_NEXT:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
-  
+  if botao_NEXT:
+    st.write(' ')
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
