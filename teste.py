@@ -3,11 +3,6 @@ import streamlit as st
 from json import loads
 #__________________________________________________________________________________________________________________________________________________________________________________
 
-topo = st.widget
-bar = st.sidebar
-col1, col12, col3 = st.columns([1,2,3])
-
-
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 st.markdown('''
@@ -20,11 +15,22 @@ Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada po
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
 ''')
-botao_NEXT = st.button('?', type="primary", position="right")
-if botao_NEXT:
-  st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
+
+with col3:
+  botao_NEXT = st.button('?', type="primary", position="right")
+  if botao_NEXT:
+    st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
     
 #_____________________________________________________________________________________________________________________________________________________________________________
+
+# Criando Colunas Variadas_____________________________________________________________________________________________________________________________________________________
+col1, col12, col3 = st.columns([1,2,3])
+
+
+
+#_______________________________________________________________________________________________________________________________________________________________________________
+
+
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
