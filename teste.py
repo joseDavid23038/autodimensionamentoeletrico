@@ -10,7 +10,7 @@ a, c = st.columns(2)
 
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
-c.markdown('''
+st.markdown('''
 
 # Bem vindo
 ### Redimensionamento de Circuito Elétricos
@@ -21,9 +21,9 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 
 ''')
 
-botao_NEXT = c.button('?', type="primary")
+botao_NEXT = st.button('?', type="primary")
 if botao_NEXT:
-  c.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
+  st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
