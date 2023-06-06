@@ -10,7 +10,7 @@ a, b, c = st.columns(3)
 
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
-st.markdown('''
+c.markdown('''
 
 # Bem vindo
 ### Redimensionamento de Circuito Elétricos
