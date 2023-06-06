@@ -3,8 +3,13 @@ import streamlit as st
 
 
 #Criando o titulo 
-st.title("FOFOS DA BITOLA")
+st.markdown('''
 
+# **FOFOS DA BITOLA** 
+
+## *APP para redimensionamento*
+
+''')
 
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
