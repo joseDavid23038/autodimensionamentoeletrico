@@ -25,14 +25,13 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 
 dica = False
 
-if dica:
-  st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
-
-
 botao_dica = st.button('?', type="primary")
 if botao_dica:
   dica = not dica 
-  
+ 
+if dica:
+  st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
+
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
