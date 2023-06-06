@@ -16,5 +16,5 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
 
-st.sidebar.selecttext("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
+st.sidebar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
 st.button("B")
