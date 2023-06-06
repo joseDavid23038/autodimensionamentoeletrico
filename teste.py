@@ -15,7 +15,7 @@ Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada po
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
 ''')
-botao_NEXT = st.button('?', type="primary", position="left")
+botao_NEXT = st.button('?', type="primary", position=left)
 if botao_NEXT:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
     
