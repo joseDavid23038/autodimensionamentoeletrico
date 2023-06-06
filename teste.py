@@ -6,7 +6,7 @@ from json import loads
 
 
 
-#Criando a Pagina Inicial
+# Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 st.markdown('''
 
 # **!! Bem vindo !!**
@@ -27,13 +27,15 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 -Gustavo Matos   
 
 ''')	
+st.button("NEXT",type="primary")
+
+#_____________________________________________________________________________________________________________________________________________________________________________
 
 
+# Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 
-
-# Criando uma Barra Lateral 
 st.sidebar.title("MENU")
 
 st.sidebar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
-st.button("TESTE",type="primary")
- 
+
+ #____________________________________________________________________________________________________________________________________________________________________________
