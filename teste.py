@@ -9,6 +9,14 @@ st.markdown('''
 ''')
 arquivo = st.file_uploader("arquivo aqui"
 )
+if arquivo:
+  match arquivo.type.split("/"):
+    case "application", "json":
+      st.write("Aquivo Json ")
+    case "image", _:
+      st.write("Arquivo JPG")
+      st.image(arquivo)
+
 
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
