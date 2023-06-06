@@ -17,7 +17,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 ''')
 botao_NEXT = st.button("NEXT",type="primary")
 if botao_NEXT:
-  st.image('https://www.example.com/image.jpg', caption='Imagem de exemplo')
+  st.image("https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194")
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
