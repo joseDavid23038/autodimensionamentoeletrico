@@ -27,7 +27,7 @@ bar = st.sidebar
 bar.title("MENU")
 
 barra_opcções = bar.selectbox(
-  "Ir para", font_type"
+  "Ir para",
   ["Pagina Inicial","Redimensionamento","Sobre o Projeto"])
 
 #____________________________________________________________________________________________________________________________________________________________________________
