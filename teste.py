@@ -10,8 +10,10 @@ st.markdown('''
 ''')
 arquivo = st.file_uploader("arquivo aqui")
 if arquivo:
-      	st.image(arquivo)	
-			
+  st.image(arquivo)	
+  
+else:
+  st.error("Arraste um arquivo")
 		
 
 # Criando uma Barra Lateral 
