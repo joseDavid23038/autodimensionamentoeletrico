@@ -23,10 +23,16 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 
 ''')
 
-botao_NEXT = st.button('?', type="primary")
-if botao_NEXT:
+dica = False
+
+if dica:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
-  ti.delay(1000)
+
+
+botao_dica = st.button('?', type="primary")
+if botao_dica:
+  dica = not dica 
+  
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
