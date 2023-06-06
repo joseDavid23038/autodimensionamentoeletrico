@@ -16,6 +16,8 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 
 ''')	
 st.button("NEXT",type="primary")
+if button:
+  st.expander("Escolha")
 
 #_____________________________________________________________________________________________________________________________________________________________________________
 
@@ -25,7 +27,7 @@ bar = st.sidebar
 bar.title("MENU")
 
 barra_opcções = bar.selectbox(
-  "Ir para",
+  "Ir para", font_type"
   ["Pagina Inicial","Redimensionamento","Sobre o Projeto"])
 
 #____________________________________________________________________________________________________________________________________________________________________________
