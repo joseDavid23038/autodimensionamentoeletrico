@@ -29,6 +29,24 @@ Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada po
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 ''')	
 
+button_width = 100
+button_height = 50
+margin = 10
+
+# Obter a largura e altura da tela
+st.session_state.screen_width = st.session_state.screen_width or st.experimental_get_query_params().get("screen_width", [0])[0]
+st.session_state.screen_height = st.session_state.screen_height or st.experimental_get_query_params().get("screen_height", [0])[0]
+
+# Adicionar um botão no canto inferior direito
+button_position = (st.session_state.screen_width - button_width - margin, st.session_state.screen_height - button_height - margin)
+if st.button('Clique aqui', key='my_button', position=button_position, width=button_width, height=button_height):
+    st.write('Você clicou no botão!')
+
+
+
+
+
+
 # Criando uma Barra Lateral 
 st.sidebar.title("MENU")
 
