@@ -15,7 +15,7 @@ Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada po
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
 ''')
-botao_NEXT = st.button("NEXT",type="primary")
+botao_NEXT = st.button("?",type="primary")
 if botao_NEXT:
   st.image("https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194")
     
