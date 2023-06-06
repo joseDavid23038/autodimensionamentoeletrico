@@ -2,9 +2,25 @@
 import streamlit as st
 from json import loads
 
-sd.theme(dark)
+
+
+
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #FF0000;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 #Criando a Pagina Inicial
 st.markdown('''
+
 # **!! Bem vindo !!**
 ### Redimensionamento de Circuito Elétricos
 
