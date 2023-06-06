@@ -1,5 +1,6 @@
 #Importando Bibliotecas
 import streamlit as st
+from json import loads
 
 
 #Criando o titulo 
@@ -10,7 +11,7 @@ st.markdown('''
 arquivo = st.file_uploader("arquivo aqui")
 if arquivo:
   match arquivo.type.split("/"):
-    case "image",:
+    case "image",_:
       st.write("Arquivo JPG")
       st.image(arquivo)	
 			
