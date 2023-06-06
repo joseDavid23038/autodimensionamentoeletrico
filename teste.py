@@ -2,6 +2,7 @@
 import streamlit as st
 from json import loads
 import timeit as ti
+from st_pages import Page, show_pages, add_page_title
 
 #__________________________________________________________________________________________________________________________________________________________________________________
 
@@ -32,17 +33,6 @@ if botao_dica:
 if dica:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
   
-state = False
-
-# Cria um botão
-if st.button('Mostrar/Ocultar mensagem'):
-    # Alterna o estado da variável
-    state = not state
-
-# Exibe a mensagem se o estado for True
-if state:
-    st.write('Essa é a mensagem que será mostrada ou ocultada')
-
     
 #_____________________________________________________________________________________________________________________________________________________________________________
 
