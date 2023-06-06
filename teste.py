@@ -10,6 +10,7 @@ st.markdown('''
 ''')
 arquivo = st.file_uploader("arquivo aqui")
 if arquivo:
+	
   match arquivo.type.split('/'):
     case 'application','image':
       st.image(arquivo)	
