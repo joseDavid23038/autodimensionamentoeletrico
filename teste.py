@@ -20,7 +20,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
     
       
 
-#### **Trabalho Idealizado e Desenvolvido por: **  
+#### ** Trabalho Idealizado e Desenvolvido por: **  
 -Emelyn  
 -José David   
 -Daniel Bravin  
