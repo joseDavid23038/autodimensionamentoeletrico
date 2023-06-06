@@ -4,7 +4,7 @@ from json import loads
 #__________________________________________________________________________________________________________________________________________________________________________________
 
 # Criando Colunas Variadas_____________________________________________________________________________________________________________________________________________________
-col1, col12, col3 = st.beta.columns(3)
+a, b, c = st.columns(3)
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
@@ -21,7 +21,7 @@ Conduto, o material e contas disponibilizados ainda assim devem ser revisados po
 
 ''')
 
-botao_NEXT = col3.button('?', type="primary")
+botao_NEXT = st.c.button('?', type="primary")
 if botao_NEXT:
   st.write('Botãoes de interrogação "?", são usados para quando houver dúvidas')
     
