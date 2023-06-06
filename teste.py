@@ -10,7 +10,6 @@ st.markdown('''
 ''')
 arquivo = st.file_uploader("arquivo aqui")
 if arquivo:
-    	case 'application','image':
       	st.image(arquivo)	
 			
 		
