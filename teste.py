@@ -16,16 +16,6 @@ Essa aba é direcionada a armazenar as informações do seu circuito elétrico, 
 Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada por um profissional, nosso trabalho é encontrar uma escala de produto que satisfaça suas necessidades.
 Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
-  
-    
-      
-
-#### ** Trabalho Idealizado e Desenvolvido por: **  
--Emelyn  
--José David   
--Daniel Bravin  
--Gustavo Matos   
-
 ''')	
 st.button("NEXT",type="primary")
 
@@ -34,7 +24,9 @@ st.button("NEXT",type="primary")
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 
-st.sidebar.title("MENU")
+bar =  st.sidebar
+
+bar.title("MENU")
 
 st.sidebar.selectbox("Qual o Metodo Utilizado",["Metodo A","Método B","Método C","Metodo D"])
 
