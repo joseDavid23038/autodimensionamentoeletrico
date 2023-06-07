@@ -16,6 +16,7 @@ sobre = st.container()
 pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
 pagina_sobre = bar.button("Sobre o Projeto", type="primary")
+pagina_resposta = bar.button("Resultado", type="primary")
 
 
 if pagina_inicial:
@@ -27,6 +28,9 @@ elif pagina_redi:
 elif pagina_sobre:
   stage_page = 3
 
+elif pagina_resposta:
+  stage_page = 4
+  
 else:
   stage_page = 1
 
@@ -67,14 +71,22 @@ if stage_page == 2:
       
       botao_enviar = st.form_submit_button("Enviar", type="primary")
     
-    if botao_enviar:
+  
+    
+#_______________________________________________________________________________________________________________________________________________________________________________
+# Criando Pagina com Resultado__________________________________________________________________________________________________________________________________________________
+if stage_page == 4:
+  resultado.empty()
+  if botao_enviar:
+      stage_page = 4
+      
       metodo = metodo_usado.value
       v = tensao.value
       p = potencia.value
       i = p/v
       st.write(i)
-    
-#_______________________________________________________________________________________________________________________________________________________________________________
+      
+#_________________________________________________________________________________________________________________________________________________________________________________
 
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
