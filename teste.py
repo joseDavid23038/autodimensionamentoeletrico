@@ -59,14 +59,21 @@ if stage_page == 2:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
     with st.form(key='redimensionamento_form'):
-      metodo = st.selectbox("Método", ["", "Método A1","Método A2", "Método B1","Método B2", "Método C", "Método D"])
+      metodo_usado = st.selectbox("Método", ["-", "A1","A2", "B1","B2", "C", "D"])
       tensao = st.selectbox("Tensão", ["",127, 220,380])
       potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-    st.write(tensao*2)
-    st.write(potencia*2)  
       
+      botão_enviar = st.form_submit_button("Enviar", type="primary")
+    
+    if botao_enviar:
+      metodo = metodo_usado.value
+      v = tensao.value
+      p = potencia.value
+      i = p/v
+      st.write(i)
+    
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
