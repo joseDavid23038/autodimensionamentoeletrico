@@ -3,6 +3,8 @@ import streamlit as st
 #https://mrbravin-autodimensionamentoeletrico-teste-kcs6ty.streamlit.app__________________________________________________________________________________________________________________________________________________________________________________
 
 
+metodo = False
+
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
 #_______________________________________________________________________________________________________________________________________________________________________________
@@ -40,7 +42,7 @@ with entrada:
     num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
   
-metodo = False
+
   with ajuda:
     botao_metodo = st.button("?", type="primary")
     if botao_metodo == True:
