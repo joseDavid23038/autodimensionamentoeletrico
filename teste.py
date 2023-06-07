@@ -16,7 +16,6 @@ sobre = st.container()
 pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
 pagina_sobre = bar.button("Sobre o Projeto", type="primary")
-pagina_resposta = bar.button("Resultado", type="primary")
 
 
 if pagina_inicial:
@@ -27,9 +26,6 @@ elif pagina_redi:
 
 elif pagina_sobre:
   stage_page = 3
-
-elif pagina_resposta:
-  stage_page = 4
   
 else:
   stage_page = 1
