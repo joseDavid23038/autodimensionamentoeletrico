@@ -24,8 +24,7 @@ redi = st.container()
 
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
-with inicial:
-
+inicial
 
 if pagina_inicial:
   inicial.empty()
