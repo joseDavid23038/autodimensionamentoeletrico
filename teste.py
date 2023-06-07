@@ -36,7 +36,7 @@ else:
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 if stage_page == 1:
   inicial.empty()
-  with inicial:
+  with inicial:s
     st.markdown('''
 
     # Bem vindo
@@ -61,10 +61,9 @@ if stage_page == 2:
     with st.form(key='redimensionamento_form'):
       metodo = st.selectbox("Método", ["", "Método A1","Método A2", "Método B1","Método B2", "Método C", "Método D"])
       tensao = st.selectbox("Tensão", ["",127, 220,380])
-      v = tensao
       potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
       corrente = potencia/tensao
-      st.write(v*2)
+      st.write(tensao*2)
       st.write(potencia*2)
       print(corrente)
      
