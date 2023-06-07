@@ -39,12 +39,15 @@ with entrada:
     potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
     num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-    
+  
+metodo = False
   with ajuda:
-    metodo = False
     botao_metodo = st.button("?", type="primary")
-    if botao_metodo:
-      metodo = not metodo
+    if botao_metodo == True:
+      if metodo == False
+        metodo = True
+      else:
+        metodo = False
     
     if metodo:
       st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
