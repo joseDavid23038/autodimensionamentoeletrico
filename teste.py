@@ -6,7 +6,7 @@ import streamlit as st
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
 
-bar.title("MENU")
+bar.title("                MENU")
 
 pagina_inicial = bar.button("Página Inicial")
 pagina_redi = bar.button("Redimensionamento")
