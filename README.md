@@ -16,6 +16,9 @@ Até o momento, já conseguimos desenvolver um código funcional que recebe uma 
 ##### INTERFACE (Front-end):
 ![image](https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194)
 
+A imagem acima nos mostra uma base de iriamos trabalhar no nosso layout final, contudo devido a nova ferramenta que começamos a usar o "Streamlit" nosso desig teve de ser alterado em partes. 
+Como dito estamos usando o Streamlit, ele permite criar uma página web e altera-lá diretamente pelo github. Algumas das configurações são um tanto limitantes mas ele nos permite trabalhar de maneira bem simples e rapida.
+O código que ainda passa por desenvolvimento carece de polimento e organização, contudo se mostra funcional. 
 
 ##### ANÁLISE (Back-end):
 Ainda é preciso organizar corretamente as funções em um arquivo definitivo em .py e comentar o código.
