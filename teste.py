@@ -53,7 +53,7 @@ if pagina_redi:
       potencia = st.slider("Potência Total do Circuito", min_value=0, max_value=26000)
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-      botao_metodo = st.button("?")
+      botao_metodo = st.form_submit_button("?")
       if botao_metodo:
         st.write("Metodos de Dimencionamento")
       
