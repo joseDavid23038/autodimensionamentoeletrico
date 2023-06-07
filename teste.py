@@ -46,7 +46,6 @@ if pagina_redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
     
-    with st.form(key='redimensionamento_form'):
       metodo = st.selectbox("Método", ["", "Método A", "Método B", "Método C", "Método D", "Método E"])
       
       tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
