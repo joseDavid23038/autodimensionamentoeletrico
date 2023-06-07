@@ -20,8 +20,12 @@ pagina_sobre = bar.button("Sobre o Projeto", type="primary")
 
 if pagina_inicial:
   stage_page = 1
+  
+if pagina_redi:
+  stage_page = 2
 
-
+if pagina_sobre:
+  stage_page = 3
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
@@ -46,7 +50,7 @@ if stage_page == 1:
 # Criando a Aba de Redimencionamento______________________________________________________________________________________________________________________________________________
 metodo = ""
 
-if pagina_redi:
+elif stage_page == 2:
   redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
@@ -66,7 +70,7 @@ if pagina_redi:
 
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
-if pagina_sobre:
+elif stage_page == 3:
   sobre.empty()
   with sobre:
     st.markdown("""
