@@ -14,6 +14,8 @@ with st.expander("About Us"):
   ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
 
   Criadores e Idealizadores:  
+  -Daniel Bravin  
+  -Gustavo Matos  
   -Emelyn 
   -José David  
   
@@ -41,8 +43,7 @@ metodo = ""
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
 
 
-  -Daniel Bravin  
-  -Gustavo Matos  
+  
     
     
 #________________________________________________________________________________________________________________________________________________________________________________
