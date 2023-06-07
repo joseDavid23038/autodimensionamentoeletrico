@@ -19,13 +19,13 @@ pagina_sobre = bar.button("Sobre o Projeto", type="primary")
 
 
 if pagina_inicial:
-  stage_page = 1
+  stage_page == 1
   
 if pagina_redi:
-  stage_page = 2
+  stage_page == 2
 
 if pagina_sobre:
-  stage_page = 3
+  stage_page == 3
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
