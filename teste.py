@@ -63,7 +63,9 @@ if stage_page == 2:
       tensao = st.selectbox("Tensão", [127, 220,380])
       potencia = st.slider("Potência Total do Circuito", min_value=0, max_value=26000)
       corrente = potencia/tensao
-      st.write(corrente)
+      print(tensao*2)
+      print(potencia*2)
+      print(corrente)
      
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
