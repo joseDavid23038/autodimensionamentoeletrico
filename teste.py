@@ -59,11 +59,11 @@ if pagina_sobre:
     
     ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
     
-    ####Criadores e Idealizadores:
-    -Emelyn
-    -José David
-    -Daniel Bravin
-    -Gustavo Matos
+   Criadores e Idealizadores:  
+    -Emelyn  
+    -José David  
+    -Daniel Bravin  
+    -Gustavo Matos  
     
     """)
 #________________________________________________________________________________________________________________________________________________________________________________
