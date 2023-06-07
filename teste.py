@@ -8,7 +8,7 @@ bar = st.sidebar
 
 bar.title("MENU")
 
-pagina_inicial = bar.button("Página Inicial", type="primary")
+pagina_inicial = bar.radio("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
 pagina_sobre = bar.button("Sobre o Projeto", type="primary")
 
