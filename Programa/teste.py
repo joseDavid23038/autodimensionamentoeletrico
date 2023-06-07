@@ -52,12 +52,15 @@ if pagina_redi:
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       botao_metodo = st.form_submit_button("?")
+      if botao_metodo:
+        st.write("Metodos de Dimencionamento")
       
+# Criando sistema de coleta de dados____________________________________   
       tabela_usada = "DOIS_COBRE_PVC.xlsx" #
       metodo_escolhido = metodo
       bitolaMin = 2.5
       P=int(potencia)
-      V= int(tensao)
+      V = int(tensao[:-1])
       I = P/V
       n_circuitos = int(num_circuitos)
       temperatura_ambiente = int(temperatura)
@@ -74,10 +77,9 @@ if pagina_redi:
       #print(temperatura)
 
       agrupamento = pd.read_excel("AGRUPAMENTO.xlsx")
-      
-      if botao_metodo:
-        st.write("Metodos de Dimencionamento")
-      
+    
+      st.write('<font size="6">I: {}</font>'.format(I), unsafe_allow_html=True)
+
       
 #_______________________________________________________________________________________________________________________________________________________________________________
 
