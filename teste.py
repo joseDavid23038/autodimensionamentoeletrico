@@ -60,7 +60,7 @@ if stage_page == 2:
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
     with st.form(key='redimensionamento_form'):
       metodo = st.selectbox("Método", ["", "Método A1","Método A2", "Método B1","Método B2", "Método C", "Método D"])
-      tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
+      tensao = st.selectbox("Tensão", [127, 220,380])
       potencia = st.slider("Potência Total do Circuito", min_value=0, max_value=26000)
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
