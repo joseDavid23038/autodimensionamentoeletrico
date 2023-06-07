@@ -42,7 +42,7 @@ with entrada:
     
   with ajuda:
     botao_metodo = st.button("?", type="primary")
-    if botao_metodo:
+    while botao_metodo:
       st.write("Botão destinado a ajudar o usuario quanto algum conceito")
       st.divider()
   
