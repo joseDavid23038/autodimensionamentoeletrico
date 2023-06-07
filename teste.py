@@ -11,7 +11,7 @@ bar.title("MENU")
 
 pagina_inicial = bar.button("Página Inicial")
 pagina_redi = bar.button("Redimensionamento")
-pagina_sobre = bar.buttin("Sobre o Projeto")
+pagina_sobre = bar.button("Sobre o Projeto")
 
 #____________________________________________________________________________________________________________________________________________________________________________
 
