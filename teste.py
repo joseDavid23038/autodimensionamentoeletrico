@@ -52,7 +52,7 @@ if pagina_redi:
       tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
       potencia = st.number_input("Potência (em Watts)")
       num_circuitos = st.number_input("Número de Circuitos")
-      
+      temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       botao_metodo = st.form_submit_button("Mostrar Métodos de Dimensionamento")
       
       if botao_metodo:
