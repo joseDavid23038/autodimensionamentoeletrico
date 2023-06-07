@@ -36,7 +36,7 @@ else:
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 if stage_page == 1:
   inicial.empty()
-  with inicial:s
+  with inicial:
     st.markdown('''
 
     # Bem vindo
