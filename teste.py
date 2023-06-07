@@ -27,6 +27,9 @@ elif pagina_redi:
 
 elif pagina_sobre:
   stage_page = 3
+
+elif botao_enviar:
+  stage_page = 4
   
 else: 
   stage_page = 1
