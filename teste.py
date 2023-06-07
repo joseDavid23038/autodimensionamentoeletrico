@@ -28,7 +28,7 @@ elif pagina_redi:
 elif pagina_sobre:
   stage_page = 3
 
-elif botao_enviar:
+elif x == True:
   stage_page = 4
   
 else: 
@@ -57,6 +57,8 @@ if stage_page == 1:
 
 # Criando a Aba de Redimencionamento______________________________________________________________________________________________________________________________________________
 metodo = ""
+x = False
+
 
 if stage_page == 2:
   redi.empty()
@@ -71,11 +73,11 @@ if stage_page == 2:
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       
       botao_enviar = st.form_submit_button("Enviar", type="primary")
+      
       if botao_enviar:
-        st.write(f'Você digitou: {st.session_state.form_data["tensão"]}')
+        x = True 
         stage_page = 4
 
-    
   
     
 #_______________________________________________________________________________________________________________________________________________________________________________
