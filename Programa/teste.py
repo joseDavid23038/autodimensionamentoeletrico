@@ -46,7 +46,7 @@ if pagina_redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
     with st.form(key='redimensionamento_form'):
-      metodo = st.selectbox("Método", ["", "Método A1","Método A2" "Método B1","Método B2", "Método C", "Método D", "Método E"])
+      metodo = st.selectbox("Método", ["", "Método A1","Método A2", "Método B1","Método B2", "Método C", "Método D", "Método E"])
       tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
       potencia = st.slider("Potência Total do Circuito", min_value=0, max_value=26000)
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
@@ -54,13 +54,13 @@ if pagina_redi:
       botao_metodo = st.form_submit_button("?")
       
       tabela_usada = "DOIS_COBRE_PVC.xlsx" #
-      metodo = 'B1'
+      metodo_escolhido = metodo
       bitolaMin = 2.5
-      P=7200
-      V=220
+      P=int(potencia)
+      V= int(tensao)
       I = P/V
-      n_circuitos = 3
-      temperatura_ambiente = 30
+      n_circuitos = int(num_circuitos)
+      temperatura_ambiente = int(temperatura)
       condicao = 'PVCAMBIENTE'
       
       import pandas as pd
