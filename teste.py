@@ -29,7 +29,7 @@ elif pagina_sobre:
   stage_page = 3
   
 else: 
-  stage_page = 3
+  stage_page = 1
   
 
 #_______________________________________________________________________________________________________________________________________________________________________________
@@ -69,6 +69,7 @@ if stage_page == 2:
       
       botao_enviar = st.form_submit_button("Enviar", type="primary")
       if botao_enviar:
+        st.write(f'Você digitou: {st.session_state.form_data["tensão"]}')
         stage_page = 4
 
     
