@@ -27,9 +27,6 @@ elif pagina_redi:
 
 elif pagina_sobre:
   stage_page = 3
-
-elif x == True:
-  stage_page = 4
   
 else: 
   stage_page = 1
@@ -74,7 +71,6 @@ if stage_page == 2:
       botao_enviar = st.form_submit_button("Enviar", type="primary")
       
       if botao_enviar:
-        x = True 
         stage_page = 4
 
   
