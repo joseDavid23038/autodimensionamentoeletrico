@@ -56,7 +56,7 @@ if pagina_redi:
         st.write("Metodos de Dimencionamento")
       
 # Criando sistema de coleta de dados____________________________________   
-      tabela_usada = "DOIS_COBRE_PVC.xlsx" #
+    
       metodo_escolhido = metodo
       bitolaMin = 2.5
       P=int(potencia)
@@ -66,17 +66,7 @@ if pagina_redi:
       temperatura_ambiente = int(temperatura)
       condicao = 'PVCAMBIENTE'
       
-      import pandas as pd
-      tabela_inicial = pd.read_excel(tabela_usada)
-      #print(tabela_inicial)
 
-      disjuntores = pd.read_excel("DISJUNTORES.xlsx")
-      #print(disjuntores)
-
-      temperatura = pd.read_excel("TEMPERATURA.xlsx")
-      #print(temperatura)
-
-      agrupamento = pd.read_excel("AGRUPAMENTO.xlsx")
     
       st.write('<font size="6">I: {}</font>'.format(I), unsafe_allow_html=True)
 
