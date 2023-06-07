@@ -7,7 +7,15 @@ import streamlit as st
 bar = st.sidebar
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.expander("About Us")
+with st.expander("About Us"):
+  st.markdown("""
+  # Sobre o Projeto:
+
+  ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
+
+  Criadores e Idealizadores:  
+  -Emelyn 
+  -José David  
   
 
 # Criando Duas telas, Entrada, Saida____________________________________________________________________________________________________________________________________________________________
@@ -32,14 +40,7 @@ metodo = ""
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
 
-st.markdown("""
-  # Sobre o Projeto:
 
-  ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
-
-  Criadores e Idealizadores:  
-  -Emelyn  
-  -José David  
   -Daniel Bravin  
   -Gustavo Matos  
     
