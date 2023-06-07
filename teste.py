@@ -56,7 +56,7 @@ if pagina_sobre:
 #________________________________________________________________________________________________________________________________________________________________________________
 dica = False
 
-botao_dica = st.button(label='<font size="40">?</font>', unsafe_allow_html=True)
+botao_dica = st.button("?", font size="40", type"primary")
 if botao_dica:
   dica = not dica 
  
