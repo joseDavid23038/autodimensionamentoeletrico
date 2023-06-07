@@ -65,7 +65,7 @@ if stage_page == 2:
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       
-      botão_enviar = st.form_submit_button("Enviar", type="primary")
+      botao_enviar = st.form_submit_button("Enviar", type="primary")
     
     if botao_enviar:
       metodo = metodo_usado.value
