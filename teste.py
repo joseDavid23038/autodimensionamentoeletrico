@@ -48,8 +48,9 @@ with entrada:
     
     if metodo:
       st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
+    else:
+      st.write("Puts")
    
-    st.divider()
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
