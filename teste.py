@@ -44,7 +44,7 @@ if pagina_redi:
   redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
-    st.write("<font size="20">Selecione as variáveis do seu circuito")
+    st.write('<font size="20">Selecione as variáveis do seu circuito</font>')
     st.selectbox("Metodo",["Método A","Método B","Método C","Método D","Método E",])
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
     
