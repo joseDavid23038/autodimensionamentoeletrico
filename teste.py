@@ -48,14 +48,16 @@ if pagina_redi:
     
     with st.form(key='redimensionamento_form'):
       metodo = st.selectbox("Método", ["", "Método A", "Método B", "Método C", "Método D", "Método E"])
-      botao_metodo = st.form_submit_button("Mostrar Métodos de Dimensionamento")
       
-      temperatura = st.slider("Temperatura", min_value=0, max_value=50)
+      tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
+      potencia = st.number_input("Potência (em Watts)")
+      num_circuitos = st.number_input("Número de Circuitos")
+      
+      botao_metodo = st.form_submit_button("Mostrar Métodos de Dimensionamento")
       
       if botao_metodo:
         st.write("Métodos de Dimensionamento")
 
-    
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
