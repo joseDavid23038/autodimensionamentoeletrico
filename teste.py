@@ -8,7 +8,7 @@ bar = st.sidebar
 
 bar.title("MENU")
 
-pagina_inicial = bar.radio("Página Inicial", type="primary")
+pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
 pagina_sobre = bar.button("Sobre o Projeto", type="primary")
 
@@ -45,12 +45,16 @@ if pagina_redi:
   with redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
-    metodo = st.selectbox("Metodo",["","Método A","Método B","Método C","Método D","Método E",])
-    botao_metodo = st.button("?")
-    if botao_metodo:
-      st.write("Metodos de Dimencionamento")
     
-    temperatura = st.slider("Temperatura", min_value=0, max_value=50)
+    with st.form(key='redimensionamento_form'):
+      metodo = st.selectbox("Método", ["", "Método A", "Método B", "Método C", "Método D", "Método E"])
+      botao_metodo = st.form_submit_button("Mostrar Métodos de Dimensionamento")
+      
+      temperatura = st.slider("Temperatura", min_value=0, max_value=50)
+      
+      if botao_metodo:
+        st.write("Métodos de Dimensionamento")
+
     
 #_______________________________________________________________________________________________________________________________________________________________________________
 
