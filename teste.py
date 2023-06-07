@@ -68,14 +68,14 @@ if stage_page == 2:
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       
       botao_enviar = st.form_submit_button("Enviar", type="primary")
+      if botao_enviar:
+        stage_page = 4
+
     
   
     
 #_______________________________________________________________________________________________________________________________________________________________________________
 # Criando Pagina com Resultado__________________________________________________________________________________________________________________________________________________
-if botao_enviar:
-  stage_page = 4
-
 if stage_page == 4:
   resultado.empty()
   with resultado:
