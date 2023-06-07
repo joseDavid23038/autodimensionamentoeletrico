@@ -34,12 +34,17 @@ with entrada:
   ''')
   variaveis, ajuda = st.columns([3,1])
   with variaveis:
-    box = st.selectbox("Teste",[1,2,4,5])
-    box2 = st.selectbox("Teste",[1,2,4,5], key="seilá")
-    soma = box + box2
+    metodo_usado = st.selectbox("Método", ["-", "A1","A2", "B1","B2", "C", "D"])
+    tensao = st.selectbox("Tensão", ["",127, 220,380])
+    potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
+    num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
+    temperatura = st.slider("Temperatura", min_value=0, max_value=50)
     
   with ajuda:
-    st.write(soma)
+    botao_metodo = st.button("?", type="primary")
+    if botao_metodo:
+      st.write("Botão destinado a ajudar o usuario quanto algum conceito")
+      st.divider()
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
