@@ -5,8 +5,12 @@ import streamlit as st
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
-
 bar.title("MENU")
+
+state_page = 0 
+if state_page = 1:
+  with 
+  
 
 pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
@@ -17,12 +21,24 @@ inicial = st.container()
 redi = st.container()
 sobre = st.container()
 
+if pagina_inicial:
+  inicial.empty()
+  state_page1 = 1
+  
+if pagina_redi:
+  redi.empty()
+  state_page = 2
+  
+if pagina_sobre:
+  sobre.empty()
+  state_page = 3
+
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
-if pagina_inicial:
-  inicial.empty()
+
+if state_page = 1:
   with inicial:
     st.markdown('''
 
@@ -40,8 +56,9 @@ if pagina_inicial:
 # Criando a Aba de Redimencionamento______________________________________________________________________________________________________________________________________________
 metodo = ""
 
-if pagina_redi:
-  redi.empty()
+
+ 
+if state_page = 2:
   with redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
@@ -49,15 +66,15 @@ if pagina_redi:
     botao_metodo = st.button("?")
     if botao_metodo:
       st.write("Metodos de Dimencionamento")
-    
+
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-    
+
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
-if pagina_sobre:
-  sobre.empty()
+  
+if state_page = 3:
   with sobre:
     st.markdown("""
     # Sobre o Projeto:
