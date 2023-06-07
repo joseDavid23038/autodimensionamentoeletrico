@@ -7,6 +7,9 @@ import streamlit as st
 bar = st.sidebar
 #_______________________________________________________________________________________________________________________________________________________________________________
 
+st.title("Redimencionamento De Circuitos")
+st.divider()
+
 with st.expander("About Us"):
   st.markdown("""
   # Sobre o Projeto:
