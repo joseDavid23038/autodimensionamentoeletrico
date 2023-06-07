@@ -47,7 +47,7 @@ with entrada:
       metodo = not metodo
     
     if metodo:
-      st.image()
+      st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
    
     st.divider()
   
