@@ -28,7 +28,7 @@ if pagina_inicial:
     ''')
 if pagina_redi:
   redi.empty()
-  with redi
+  with redi:
     st.button("Teste")
 
 dica = False
