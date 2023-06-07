@@ -41,12 +41,14 @@ with entrada:
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
     
   with ajuda:
-    st.divider()
+    metodo = False
     botao_metodo = st.button("?", type="primary")
-    if botao_metodo == True:
-      st.write("Botão destinado a ajudar o usuario quanto algum conceito")
-    else:
-      st.write(" ")
+    if botao_metodo:
+      metodo = not metodo
+    
+    if metodo:
+      st.image()
+   
     st.divider()
   
 #______________________________________________________________________________________________________________________________________________________________________________
