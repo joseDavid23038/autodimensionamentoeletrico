@@ -12,6 +12,7 @@ state_page = 1
 inicial = st.container()
 redi = st.container()
 sobre = st.container()
+resultado = st.container()
 
 pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
@@ -72,11 +73,15 @@ if stage_page == 2:
     
 #_______________________________________________________________________________________________________________________________________________________________________________
 # Criando Pagina com Resultado__________________________________________________________________________________________________________________________________________________
+if botao_enviar:
+  stage_page = 4
+
 if stage_page == 4:
   resultado.empty()
-  if botao_enviar:
-      stage_page = 4
-      
+  with resultado:
+    st.title("Resultado encontrado")
+    st.write('<font size="6">O melhor disjuntor é:</font>', unsafe_allow_html=True)
+    with st.form(key='resultado_form'): 
       metodo = metodo_usado.value
       v = tensao.value
       p = potencia.value
