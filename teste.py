@@ -62,17 +62,10 @@ if stage_page == 2:
       metodo = st.selectbox("Método", ["", "Método A1","Método A2", "Método B1","Método B2", "Método C", "Método D"])
       tensao = st.selectbox("Tensão", ["",127, 220,380])
       potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
-      corrente = potencia/tensao
-      st.write(tensao*2)
-      st.write(potencia*2)
-      print(corrente)
-     
       num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-      botao_metodo = st.form_submit_button("?")
-      if botao_metodo:
-        st.write("Metodos de Dimencionamento")
-      
+    st.write(tensao*2)
+    st.write(potencia*2)  
       
 #_______________________________________________________________________________________________________________________________________________________________________________
 
