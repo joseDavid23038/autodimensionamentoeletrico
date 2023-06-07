@@ -15,7 +15,7 @@ redi = st.container()
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
 with inicial:
-st.markdown('''
+  st.markdown('''
 
 # Bem vindo
 ### Redimensionamento de Circuito Elétricos
