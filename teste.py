@@ -5,12 +5,8 @@ import streamlit as st
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
-bar.title("MENU")
 
-state_page = 0 
-if state_page = 1:
-  with 
-  
+bar.title("MENU")
 
 pagina_inicial = bar.button("Página Inicial", type="primary")
 pagina_redi = bar.button("Redimensionamento", type="primary")
@@ -21,24 +17,12 @@ inicial = st.container()
 redi = st.container()
 sobre = st.container()
 
-if pagina_inicial:
-  inicial.empty()
-  state_page1 = 1
-  
-if pagina_redi:
-  redi.empty()
-  state_page = 2
-  
-if pagina_sobre:
-  sobre.empty()
-  state_page = 3
-
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
 # Criando a Pagina Inicial____________________________________________________________________________________________________________________________________________________________
-
-if state_page = 1:
+if pagina_inicial:
+  inicial.empty()
   with inicial:
     st.markdown('''
 
@@ -56,25 +40,28 @@ if state_page = 1:
 # Criando a Aba de Redimencionamento______________________________________________________________________________________________________________________________________________
 metodo = ""
 
-
- 
-if state_page = 2:
+if pagina_redi:
+  redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
-    metodo = st.selectbox("Metodo",["","Método A","Método B","Método C","Método D","Método E",])
-    botao_metodo = st.button("?")
-    if botao_metodo:
-      st.write("Metodos de Dimencionamento")
-
-    temperatura = st.slider("Temperatura", min_value=0, max_value=50)
-
+    with st.form(key='redimensionamento_form'):
+      metodo = st.selectbox("Método", ["", "Método A1","Método A2" "Método B1","Método B2", "Método C", "Método D", "Método E"])
+      tensao = st.selectbox("Tensão", ["127V", "220V", "380V"])
+      potencia = st.slider("Potência Total do Circuito", min_value=0, max_value=26000)
+      num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
+      temperatura = st.slider("Temperatura", min_value=0, max_value=50)
+      botao_metodo = st.form_submit_button("?")
+      if botao_metodo:
+        st.write("Metodos de Dimencionamento")
+      
+      
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
-  
-if state_page = 3:
+if pagina_sobre:
+  sobre.empty()
   with sobre:
     st.markdown("""
     # Sobre o Projeto:
@@ -89,5 +76,4 @@ if state_page = 3:
     
     """)
 #________________________________________________________________________________________________________________________________________________________________________________
-
 
