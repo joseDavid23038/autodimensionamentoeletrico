@@ -47,7 +47,7 @@ if pagina_redi:
     st.title("Redimensionamento de Circuitos")
     st.write("Selecione o metodo de dimencionamento")
     st.selectbox("Metodo",["Método A","Método B","Método C","Método D","Método E",])
-    
+    st.selectbox("Metodo",["Método A","Método B","Método C","Método D","Método E",])
     
 #_______________________________________________________________________________________________________________________________________________________________________________
 
