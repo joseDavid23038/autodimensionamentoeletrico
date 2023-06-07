@@ -55,9 +55,7 @@ if pagina_redi:
       temperatura = st.slider("Temperatura", min_value=0, max_value=50)
       botao_metodo = st.button("?")
       
-      if botao_metodo:
-        st.write("Métodos de Dimensionamento")
-
+      
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 
