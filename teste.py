@@ -50,7 +50,7 @@ if stage_page == 1:
 # Criando a Aba de Redimencionamento______________________________________________________________________________________________________________________________________________
 metodo = ""
 
-elseif stage_page == 2:
+if stage_page == 2:
   redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
@@ -70,7 +70,7 @@ elseif stage_page == 2:
 
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
-elseif stage_page == 3:
+if stage_page == 3:
   sobre.empty()
   with sobre:
     st.markdown("""
