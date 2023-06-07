@@ -52,8 +52,6 @@ if stage_page == 1:
     Conduto, o material e contas disponibilizados ainda assim devem ser revisados por um profisional cetificado.  
 
     ''')
-    if botao_enviar:
-      st.write(f'Você digitou: {st.session_state.form_data["text_input"]}')
 #______________________________________________________________________________________________________________________________________________________________________________
 
 
