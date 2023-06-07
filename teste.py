@@ -41,7 +41,6 @@ metodo = ""
 temperatura = ""
 
 if pagina_redi:
-  redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
     st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
@@ -52,7 +51,6 @@ if pagina_redi:
 
 # Criando Pagina "Sobre"_________________________________________________________________________________________________________________________________________________________
 if pagina_sobre:
-  sobre.empty()
   with sobre:
     st.markdown("""
     # Sobre o Projeto:
