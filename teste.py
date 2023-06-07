@@ -28,10 +28,18 @@ st.divider()
 entrada, saida = st.tabs(["Entrada","Saída"])
 
 with entrada:
-  box = st.selectbox("Teste",[1,2,4,5])
-  box2 = st.selectbox("Teste",[1,2,4,5], key="seilá")
-  soma = box + box2
-  st.write(soma)
+  st.markdown('''
+  ### Informe suas Variáveis:
+  ###### Aba direcionada a receber as variaveis de seus circúitos.
+  ''')
+  variaveis, ajuda = st.columns([4][1])
+  with variaveis:
+    box = st.selectbox("Teste",[1,2,4,5])
+    box2 = st.selectbox("Teste",[1,2,4,5], key="seilá")
+    soma = box + box2
+    
+  with ajuda:
+    st.write(soma)
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
