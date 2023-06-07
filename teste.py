@@ -30,7 +30,8 @@ entrada, saida = st.tabs(["Entrada","Saída"])
 with entrada:
   box = st.selectbox("Teste",[1,2,4,5])
   box2 = st.selectbox("Teste",[1,2,4,5])
-  st.write("A soma deu:",box+box2)
+  soma = box + box2
+  st.write(soma)
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
