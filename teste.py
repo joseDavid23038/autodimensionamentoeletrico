@@ -58,9 +58,12 @@ with entrada:
 # Criando a Aba de Saída de Dados______________________________________________________________________________________________________________________________________________
 with saida:
   st.title("Resultado do Dimensionamento")
-  corrente = potencia/tensao
+  corrente = int(potencia/tensao)
   st.markdown(f'''
-  #### A corrente do seu sistema é: {corrente}
+    
+      
+        
+  ###### A corrente do seu sistema é: {corrente}
   
   ''')
   
