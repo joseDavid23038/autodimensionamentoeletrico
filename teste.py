@@ -44,7 +44,7 @@ if pagina_redi:
   redi.empty()
   with redi:
     st.title("Redimensionamento de Circuitos")
-    st.write('<font size="6">Selecione as variáveis do seu circuito</font>', unsafe_allow_html=True)
+    st.write('<font size="6">Selecione as variáveis do seu circuito:</font>', unsafe_allow_html=True)
     st.selectbox("Metodo",["Método A","Método B","Método C","Método D","Método E",])
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
     
@@ -55,9 +55,15 @@ if pagina_sobre:
   sobre.empty()
   with sobre:
     st.markdown("""
-    teste
+    # Sobre o Projeto:
     
-    tentando apenas 
+    ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
+    
+    ####Criadores e Idealizadores:
+    -Emelyn
+    -José David
+    -Daniel Bravin
+    -Gustavo Matos
     
     """)
 #________________________________________________________________________________________________________________________________________________________________________________
