@@ -49,9 +49,6 @@ with entrada:
   variaveis, ajuda = st.columns([3,1])
   with variaveis:
     metodo_usado = st.selectbox("Método", ["A1","A2", "B1","B2", "C", "D"])
-    if st.button("Método", type="primary"):
-      st.write("Sobre método")
-      st.write("Teste...")
     tensao = st.selectbox("Tensão", [127, 220,380])
     potencia = st.number_input("Potência Total do Circuito", min_value=100, max_value=2000, value=1000)
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value= 5)
@@ -59,7 +56,9 @@ with entrada:
   
   
   with ajuda:
-    st.write("Sobre método")
+    st.markdown(''' 
+    ##### Sobre o método:
+    ''')
     if st.button("?", type="primary"):
       st.write("Teste...")
   
