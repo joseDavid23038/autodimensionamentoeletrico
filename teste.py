@@ -25,12 +25,12 @@ with st.expander("About Us"):
   st.markdown("""
   # Sobre o Projeto:
 
-  ### Esse projeto foi criado para ajudar no dicimencionamento de circuitos elétricos. 
+  ### Esse projeto foi criado para ajudar no dimencionamento de circuitos elétricos. 
 
   Criadores e Idealizadores:  
   -Daniel Bravin  
   -Gustavo Matos  
-  -Emelyn 
+  -Emelyn Alves
   -José David  
   
   """)
