@@ -67,6 +67,24 @@ with entrada:
     ''')
     if st.button("?", type="primary", key="Tensão"):
       st.write("A Tensão é referente a tensão de linha do seu circuito, consulte o seu provedor de energia caso desconheça")
+      
+    st.markdown(''' 
+    ###### Sobre a Pôtencia:
+    ''')
+    if st.button("?", type="primary", key="Método"):
+      st.write("Informe a potência total do circuito, caso desconheca clique em não sei e siga as instruções")
+      
+    st.markdown(''' 
+    ###### Sobre o Circuitos:
+    ''')
+    if st.button("?", type="primary", key="Método"):
+      st.write("Informe o numero circuitos ou condutores dentro do eletroduto")
+      
+    st.markdown(''' 
+    ###### Sobre a Temperatura:
+    ''')
+    if st.button("?", type="primary", key="Método"):
+      st.write("Informe a temperatura média do local da instalação, ou mesmo da sua região")
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
