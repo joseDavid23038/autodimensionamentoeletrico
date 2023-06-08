@@ -55,7 +55,7 @@ with entrada:
   ### Informe suas Variáveis:
   ###### Aba direcionada a receber as variaveis de seus circúitos.
   ''')
-  variaveis, ajuda = st.columns([3,2])
+  variaveis, ajuda = st.columns([4,1])
   with variaveis:
     metodo_usado = st.selectbox("Método", ["A1","A2", "B1","B2", "C", "D"])
     tensao = st.selectbox("Tensão", [127, 220,380])
