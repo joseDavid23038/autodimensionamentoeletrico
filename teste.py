@@ -6,6 +6,7 @@ import streamlit as st
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
 bar.title("Contato:")
+bar.write("Envie erros, duvidas ou sugestões no email caso haja alguma pendência")
 bar.write("email: danielbravin@hotmail.com")
 bar.write("[GitHub](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)")
 
