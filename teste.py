@@ -57,20 +57,20 @@ with entrada:
   
   with ajuda:
    st.markdown(
-    """
-    <style>
-    .stButton > button {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
+   """
+   <style>
+   .stButton > button {
+       position: fixed;
+       top: 10px;
+       right: 10px;
+   }
+   </style>
+   """,
+   unsafe_allow_html=True
+   )
 
-    if st.button("Meu botão"):
-      st.write("Botão clicado!")
+   if st.button("Meu botão"):
+     st.write("Botão clicado!")
    
   
 #______________________________________________________________________________________________________________________________________________________________________________
