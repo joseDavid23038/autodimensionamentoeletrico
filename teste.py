@@ -106,12 +106,12 @@ with saida:
   Essa aba é direcionada à mostrar o resultado do redimensionameto do circuito dado, aqui ficaram expostas as conclusões do trabalho,
   mostrando o disjuntor mais adequado e a bitola do fio condutor ideal para o seu sistema.
   
-  ''')
+  """)
+  
   corrente = int(potencia/tensao)
   st.markdown(f'''
   #### A corrente do seu sistema é: {corrente}
   
   ''')
-  
 
 
