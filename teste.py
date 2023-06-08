@@ -57,10 +57,16 @@ with entrada:
   
   with ajuda:
     st.markdown(''' 
-    ###### Sobre o método:
+    ###### Sobre o Método:
     ''')
-    if st.button("?", type="primary"):
+    if st.button("?", type="primary", key="Método"):
       st.write("Teste...")
+    
+    st.markdown(''' 
+    ###### Sobre a Tensão:
+    ''')
+    if st.button("?", type="primary", key="Tensão"):
+      st.write("A Tensão é referente a tensão de linha do seu circuito, consulte o seu provedor de energia caso desconheça")
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
