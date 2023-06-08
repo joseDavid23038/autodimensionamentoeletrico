@@ -8,6 +8,13 @@ bar = st.sidebar
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 st.title("Redimencionamento De Circuitos")
+metodo = False
+botao_metodo = st.button("?", type="primary")
+  if botao_metodo == True:
+    if metodo == False:
+      metodo = True
+    else:
+      metodo = False
 
 with st.expander("About Us"):
   st.markdown("""
