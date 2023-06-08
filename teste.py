@@ -42,6 +42,7 @@ with entrada:
   
   metodo = False
   with ajuda:
+    st.write(" ")
     botao_metodo = st.button("?", type="primary")
     if botao_metodo == True:
       if metodo == False:
