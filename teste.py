@@ -56,9 +56,14 @@ with entrada:
   
   
   with ajuda:
-    if st.button("Meu botão"):
-      st.write("Botão clicado!")
-   
+    st.markdown(
+    """
+    <div style='display: flex; justify-content: center;'>
+        <button>Meu botão</button>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
