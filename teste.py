@@ -59,7 +59,7 @@ with entrada:
    st.markdown(
    """
    <div style='display: flex; justify-content: center;'>
-       <button>Meu botão</button>
+       <button>?</button>
    </div>
    """,
    unsafe_allow_html=True
