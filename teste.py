@@ -45,7 +45,7 @@ with entrada:
     botao_metodo = st.button("?", type="primary")
     metodo = False
     if botao_metodo == True:
-      if metodo == False
+      if metodo == False:
         metodo = True
       else:
         metodo = False
