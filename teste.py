@@ -18,7 +18,7 @@ bar.write("[GitHub da Página](https://github.com/MrBravin/autodimensionamentoel
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.title("                           Redimencionamento De Circuitos")
+st.title("Redimencionamento De Circuitos")
 
 st.divider()
 with st.expander("About Us"):
