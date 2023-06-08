@@ -58,13 +58,9 @@ with entrada:
   with ajuda:
    st.markdown(
    """
-   <style>
-   .stButton > button {
-       position: fixed;
-       top: 10px;
-       right: 10px;
-   }
-   </style>
+   <div style='display: flex; justify-content: center;'>
+       <button>Meu botão</button>
+   </div>
    """,
    unsafe_allow_html=True
    )
