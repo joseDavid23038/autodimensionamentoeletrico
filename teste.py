@@ -56,11 +56,21 @@ with entrada:
   
   
   with ajuda:
-    st.write(" ")
-    metodo = False
-    botao_metodo = st.button("?", type="primary")
-    if botao_metodo == True:
-      st.write("Tesste")
+   st.markdown(
+    """
+    <style>
+    .stButton > button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+    if st.button("Meu botão"):
+      st.write("Botão clicado!")
    
   
 #______________________________________________________________________________________________________________________________________________________________________________
