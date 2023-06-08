@@ -4,7 +4,7 @@ import streamlit as st
 
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
-st.set_page_config(page_title="Redimensão", layout="centered", page_icon="U+26A1",initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Redimensão", layout="centered", page_icon="U&#x26A1;",initial_sidebar_state="collapsed")
 
 #______________________________________________________________________________________________________________________________________________________________________________
 
