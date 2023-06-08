@@ -47,15 +47,10 @@ with entrada:
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value= 5)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
   
-  metodo = False
+  
   with ajuda:
     st.write(" ")
-    botao_metodo = st.button("?", type="primary")
-    if botao_metodo == True:
-      if metodo == False:
-        metodo = True
-      else:
-        metodo = False
+    
     
     if metodo == False:
       st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
