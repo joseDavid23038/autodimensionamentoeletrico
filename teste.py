@@ -34,10 +34,10 @@ with entrada:
   ''')
   variaveis, ajuda = st.columns([3,1])
   with variaveis:
-    metodo_usado = st.selectbox("Método", ["-", "A1","A2", "B1","B2", "C", "D"])
-    tensao = st.selectbox("Tensão", ["",127, 220,380])
-    potencia = st.slider("Potência Total do Circuito", min_value=100, max_value=26000)
-    num_circuitos = st.slider("Circuitos no mesmo eletrodulto", min_value=1, max_value=30)
+    metodo_usado = st.selectbox("Método", ["A1","A2", "B1","B2", "C", "D"])
+    tensao = st.selectbox("Tensão", ["-",127, 220,380])
+    potencia = st.number_input("Potência Total do Circuito", min_value=100, max_value=2000, value=1000)
+    num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value= 5)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50)
   
 
