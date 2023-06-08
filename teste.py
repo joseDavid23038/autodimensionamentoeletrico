@@ -57,7 +57,7 @@ with entrada:
   
   with ajuda:
     st.markdown(''' 
-    ######## Sobre o método:
+    ###### Sobre o método:
     ''')
     if st.button("?", type="primary"):
       st.write("Teste...")
