@@ -60,15 +60,7 @@ with entrada:
     metodo = False
     botao_metodo = st.button("?", type="primary")
     if botao_metodo == True:
-      if metodo == False:
-        metodo = True
-    else:
-      metodo = False
-    
-    if metodo == False:
-      st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
-    else:
-      st.write("Puts")
+      st.write("Tesste")
    
   
 #______________________________________________________________________________________________________________________________________________________________________________
