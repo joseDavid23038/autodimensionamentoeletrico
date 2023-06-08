@@ -8,14 +8,8 @@ bar = st.sidebar
 #_______________________________________________________________________________________________________________________________________________________________________________
 
 st.title("Redimencionamento De Circuitos")
-metodo = False
-botao_metodo = st.button("?", type="primary")
-if botao_metodo == True:
-  if metodo == False:
-    metodo = True
-  else:
-    metodo = False
 
+st.divider()
 with st.expander("About Us"):
   st.markdown("""
   # Sobre o Projeto:
@@ -50,7 +44,13 @@ with entrada:
   
   with ajuda:
     st.write(" ")
-    
+    metodo = False
+    botao_metodo = st.button("?", type="primary")
+    if botao_metodo == True:
+      if metodo == False:
+        metodo = True
+    else:
+      metodo = False
     
     if metodo == False:
       st.image("https://github.com/MrBravin/autodimensionamentoeletrico/blob/main/Interface.jpg?raw=true")
@@ -66,10 +66,9 @@ with saida:
   st.title("Resultado do Dimensionamento")
   corrente = int(potencia/tensao)
   st.markdown(f'''
+  <br>  
     
-      
-        
-  ###### A corrente do seu sistema é: {corrente}
+  #### A corrente do seu sistema é: {corrente}
   
   ''')
   
