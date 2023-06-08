@@ -7,7 +7,7 @@ import streamlit as st
 bar = st.sidebar
 bar.title("Contato:")
 bar.write("email: danielbravin@hotmail.com")
-bar.write("Git: https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py")
+bar.write("[GitHub](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)")
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
