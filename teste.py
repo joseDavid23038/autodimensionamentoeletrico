@@ -1,6 +1,6 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
-#https://mrbravin-autodimensionamentoeletrico-teste-kcs6ty.streamlit.app__________________________________________________________________________________________________________________________________________________________________________________
+#https://mrbravin-autodimensionamentoeletrico-teste-kcs6ty.streamlit.app
 
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
@@ -37,7 +37,6 @@ with st.expander("About Us"):
 st.divider()
 
 
-
 entrada, saida = st.tabs(["Entrada","Saída"])  # Criando Duas telas, Entrada, Saida__
 
 # Criando a aba Entrada________________________________________________________________________________________________________________________________________________________
@@ -62,12 +61,18 @@ with entrada:
     tensao = st.selectbox("Tensão", [127, 220,380])
     potencia = st.number_input("Potência Total do Circuito", min_value=100, max_value=2000, value=1000)
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value=5)
-    temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
     isolamento = st.selectbox("Tipo de Isolamento", ["PVC","XLPE","EPR"])
     local = st.selectbox("Local de Instalação", ["Parede","Chão","Teto"])
-    if local == "Parede":
-        condição = "PCVAMBIENTE" 
-        print(condição)                
+    if isolamento == "PVC" and local == "Parede":
+      condicao = "PCVAMBIENTE" 
+    if isolamento == "PVC" and local == "Chão":
+      condicao = "PVCSOLO"
+    if isolamento == "PVC" and local == "Teto":
+      condicao = "PCVAMBIENTE" 
+      
+      
+        
+    temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
   with ajuda:
     st.markdown(''' 
     ###### Sobre o Método:
@@ -92,7 +97,14 @@ with entrada:
     ''')
     if st.button("?", type="primary", key="Circuitos"):
       st.write("Informe o numero circuitos ou condutores dentro do eletroduto")
+    
+    st.markdown(''' 
+    ###### Sobre o Isolamento:
+    ''')
+    if st.button("?", type="primary", key="Circuitos"):
+      st.write("Informe o Tipo de material utilzado no isolamento dos condutores")
       
+  
     st.markdown(''' 
     ###### Sobre a Temperatura:
     ''')
