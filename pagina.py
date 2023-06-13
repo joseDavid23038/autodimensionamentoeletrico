@@ -70,9 +70,10 @@ with entrada:
     ###### Sobre o Método:
     ''')
     if st.button("?", type="primary", key="Método"):
-      st.write("O Método de Referencia se refere ao modo de instalação de todo o circuito.",  
-               ![image](https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194)
-               )
+      st.markdown('''
+      O Método de Referencia se refere ao modo de instalação de todo o circuito.  
+      ![image](https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194)
+      ''')
     
     st.markdown(''' 
     ###### Sobre a Tensão:
