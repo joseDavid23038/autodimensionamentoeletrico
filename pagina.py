@@ -72,7 +72,8 @@ with entrada:
     if st.button("?", type="primary", key="Método"):
       st.markdown('''
       O Método de Referencia se refere ao modo de instalação de todo o circuito.  
-      ![image](https://github.com/emelyn23017/autodimensionamentoeletrico/assets/135053736/968dcd4e-403c-4dc9-87de-beb39a8ca194)
+      ![image](https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg)
+      
       ''')
     
     st.markdown(''' 
