@@ -63,7 +63,7 @@ with entrada:
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value=5)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
     local = st.selectbox("Local de Instalação", ["Parede","Chão","Teto"])
-    if local = "Parede":
+    if local == "Parede":
         condição == "PCVAMBIENTE" 
         print(condição)                
   with ajuda:
