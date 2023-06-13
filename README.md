@@ -1,9 +1,11 @@
-#### Autodimensionamento elétrico 
-Autores: Daniel Bravin, Emelyn Alves, Gustavo Matos, José David Alves.  
+#### Autodimensionamento elétrico residencial 
+*Autores:* Daniel Bravin, Emelyn Alves, Gustavo Matos, José David Alves.  
 
 #### Introdução: 
 O trabalho técnico referente ao dimensionamento elétrico costuma ocorrer por análise manual de dados. Essa análise geralmente é realizada com base no número de circuitos, métodos de instalação e outras condições identificadas na planta elétrica do local. Por isso, quando não realizada por profissionais a instalação está passível à riscos, que comprometem a segurança do local e da própria instalação. Com o objetivo de evitar possíveis acidentes ocasionados por desinstrução ou falha humana e facilitar o cálculo de dimensionamento elétrico, pretendemos criar um código em python, que utilize a bilioteca Pandas, para analizar as variáveis necessárias para o dimesionamento, compara-las com a Norma Regulamentadora vigente (NBR5410) e retornar as especificações do disjuntor e da seção transversal do fio a serem utilizados.
-A NBR5410 disponibiliza uma série de tabelas com importantes dados para o correto dimensionamento elétrico, como tabelas de corrente máxima até o aquecimento de uma determinada seção. Essas tabelas se relacionam entre si, de forma que, por exemplo, uma temperatura mais alta ou mais baixa que o normal que um fio possa estar exposto faz com que a corrente que o fio suporta sem aquecer aumente ou diminua em função em um fator de correção determinado em uma outra tabela que é aplicado na tabela referente a corrente limite e seção. Ou seja, os dados se relacionam diretamente e uma pequena alteração de uma variável muda completamente o resultado final, o que gera um grande risco por falhas humanas.
+A NBR5410 disponibiliza uma série de tabelas com importantes dados para o correto dimensionamento elétrico, como tabelas de corrente máxima até o aquecimento de uma determinada seção. Essas tabelas se relacionam entre si, de forma que, por exemplo, uma temperatura mais alta ou mais baixa que o normal que um fio possa estar exposto faz com que a corrente que o fio suporta, sem aquecer, aumente ou diminua em função em um fator de correção determinado em uma outra tabela que é aplicado na tabela referente a corrente limite e seção. Ou seja, os dados se relacionam diretamente e uma pequena alteração de uma variável muda completamente o resultado final, o que gera um grande risco por falhas humanas. 
+Serão utilizadas 7 diferentes tabelas da NBR5410 
+
 
 Nosso programa em si, é dividido em duas principais partes: 
   - Interface: Será a face do nosso programa e a responsável por coletar os dados do esquema elétrico do usuário. Utilizaremos o site Streamlit para criá-la. Pretendemos fazer uma interface acessível e intuitiva. 
