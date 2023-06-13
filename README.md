@@ -1,4 +1,5 @@
-#### Autodimensionamento elétrico
+#### Autodimensionamento elétrico 
+Autores: Daniel Bravin, Emelyn Alves, Gustavo Matos, José David Alves.  
 
 #### Introdução: 
 O trabalho técnico referente ao dimensionamento elétrico costuma ocorrer por análise manual de dados. Essa análise geralmente é realizada com base no número de circuitos, métodos de instalação e outras condições identificadas na planta elétrica do local. Por isso, quando não realizada por profissionais a instalação está passível à riscos, que comprometem a segurança do local e da própria instalação. Com o objetivo de evitar possíveis acidentes ocasionados por desinstrução ou falha humana e facilitar o cálculo de dimensionamento elétrico, pretendemos criar um código em python, que utilize a bilioteca Pandas, para analizar as variáveis necessárias para o dimesionamento, compara-las com a Norma Regulamentadora vigente (NBR5410) e retornar as especificações do disjuntor e da seção transversal do fio a serem utilizados.
@@ -22,3 +23,10 @@ O código que ainda passa por desenvolvimento carece de polimento e organizaçã
 
 ##### ANÁLISE (Back-end):
 Ainda é preciso organizar corretamente as funções em um arquivo definitivo em .py e comentar o código.
+
+Observações do James: *Apagar depois* 
+Melhorar a descrição 
+Link com resumo da NBR5410
+Link do streamit não abriu - Adicionar o link certo no readme 
+Nome dos Autores no Readme
+Código não foi rodado: ft não estava definida
