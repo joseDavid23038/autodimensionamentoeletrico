@@ -18,10 +18,11 @@ bar.write("[GitHub da Página](https://github.com/MrBravin/autodimensionamentoel
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.title("Redimencionamento De Circuitos")
+st.title("Redimencionamento De Circuitos")   # Essa função define um titulo, basicamente, uma string com uma edição específica.
 
-st.divider()
-with st.expander("About Us"):
+st.divider()                   #A função "diviser" é usada para criar um corte cinza na tela, meramente para melhor oragnização dos itens. 
+
+with st.expander("About Us"):  #Aqui a função expander, cria um item que ao ser clicado se expande mostrando quaisquer itens que se deja, seja um texto ou um botão.  
   st.markdown("""
   # Sobre o Projeto:
 
@@ -34,10 +35,10 @@ with st.expander("About Us"):
   -José David  
   
   """)
-st.divider()
+st.divider()  
 
 
-entrada, saida = st.tabs(["Entrada","Saída"])  # Criando Duas telas, Entrada, Saida__
+entrada, saida = st.tabs(["Entrada","Saída"])  # Criando Duas telas, Entrada, Saida
 
 # Criando a aba Entrada________________________________________________________________________________________________________________________________________________________
 with entrada:
