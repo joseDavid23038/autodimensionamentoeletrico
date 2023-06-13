@@ -82,9 +82,7 @@ with entrada:
     ###### Sobre a Potência:
     ''')
     if st.button("?", type="primary", key="Potência"):
-      st.write("Potência é referente a soma da potencia máxima individual de todos os pontos de energização do circuito, por exmplo: Tomadas de uso geral, tomadas de uso especifico...") 
-      ![image](https://github.com/emelyn23017/autodimensionamentoeletrico/blob/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg)
-      
+      st.write("Potência é referente a soma da potencia máxima individual de todos os pontos de energização do circuito, por exmplo: Tomadas de uso geral, tomadas de uso especifico...")
     st.markdown(''' 
     ###### Sobre o nº de Circuitos:
     ''')
