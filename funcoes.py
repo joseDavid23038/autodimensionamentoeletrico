@@ -78,6 +78,13 @@ def fator_correcao(agrupamento, temperatura):
     """
     return agrupamento*temperatura
 
+def bitola_min(tipo_instalacao):
+    if tipo_instalacao == "Iluminação":
+        bitola_min = 1.5
+    if tipo_instalacao == "Tomadas de Uso Específico" or tipo_instalacao =="Tomadas de Uso Geral":
+        bitola_min = 2.5
+    return bitola_min
+
 def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     """
     args:
