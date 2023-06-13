@@ -2,11 +2,6 @@
 import streamlit as st
 from funcoes import *
 
-tabela_disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
-tabela_agrupamento = pd.read_excel("Dados\AGRUPAMENTO.xlsx")
-tabela_temperatura = pd.read_excel("Dados\TEMPERATURA.xlsx")
-
-
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
 st.set_page_config(page_title="Redimencionamento", layout="wide", page_icon="U&#x26A1;",initial_sidebar_state="collapsed")
 
