@@ -44,7 +44,7 @@ entrada, saida = st.tabs(["Entrada","Saída"])  # Criando Duas telas, Entrada, S
 with entrada:
   st.markdown('''
 
-    # Bem vindo
+    # Bem-vindo
 
     Essa aba é direcionada a armazenar as informações do seu circuito elétrico, na qual estas, serão usadas para encontrar o disjuntor e bitola ideal para o seu sistema.
     Lembresse, aarmação e montagem de todo aparato elétrico deve ser realizada por um profissional, nosso trabalho é encontrar uma escala de produto que satisfaça suas necessidades.
