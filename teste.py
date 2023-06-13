@@ -1,5 +1,6 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
+import calculos
 #https://mrbravin-autodimensionamentoeletrico-teste-kcs6ty.streamlit.app
 
 
@@ -98,6 +99,12 @@ with entrada:
     if st.button("?", type="primary", key="Circuitos"):
       st.write("Informe o numero circuitos ou condutores dentro do eletroduto")
     
+    st.markdown(''' 
+    ###### Sobre o Isolamento:
+    ''')
+    if st.button("?", type="primary", key="Circuitos"):
+      st.write("Informe o Tipo de material utilzado no isolamento dos condutores")
+      
     st.markdown(''' 
     ###### Sobre o Isolamento:
     ''')
