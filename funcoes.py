@@ -138,4 +138,3 @@ if __name__ == "__main__":
     bitola_mn = bitola_min(tipo_instalacao)
     secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
     print(secao)
->>>>>>> ee0257c7f7bb2c229207def375e1ab045676f624
