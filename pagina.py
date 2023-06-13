@@ -1,6 +1,6 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
-import calculos
+import main
 #https://mrbravin-autodimensionamentoeletrico-teste-kcs6ty.streamlit.app
 
 
