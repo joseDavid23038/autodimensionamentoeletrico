@@ -114,6 +114,27 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
 
 if __name__ == "__main__":
     
-    P=1550
-    V=220
-    print(disjuntor(P,V))
+    #P=1550
+    #V=220
+    # print(disjuntor(P,V))
+    '''metodo = "A1"
+    tipo_instalacao = "Iluminação"
+    tensao = 127
+    potencia = 500
+    num_circuitos = 4
+    isolamento = "PVC"
+    local = "Parede"
+    temperatura = 60 '''
+
+   
+    condicao = condicao_de_instalacao(isolamento,local)
+    disjuntores = tabela_disjuntores
+    disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
+    temperaturas = tabela_temperatura
+    ftemperatura = fator_temperatura(condicao, temperatura, temperaturas)
+    agrupamentos = tabela_agrupamento
+    agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos)
+    correcao = fator_correcao(agrupamento, ftemperatura)
+    bitola_mn = bitola_min(tipo_instalacao)
+    secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
+    print(secao)
