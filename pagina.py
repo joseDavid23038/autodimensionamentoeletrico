@@ -126,7 +126,7 @@ with saida:
   disjuntor_inicial = disjuntores_inicial(potencia,tensao)
   corrente = int(potencia/tensao)
   st.markdown(f'''
-  #### A corrente do seu sistema é: {disjuntor_inicial}
+  #### A coorente minima que o disjuntor precisa aguentar: {disjuntor_inicial}
   
   ''')
 
