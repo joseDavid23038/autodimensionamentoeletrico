@@ -24,7 +24,7 @@ def tabela_a_ser_usada(isolamento):
     return pd.read_excel(tabela_usada)
 
 
-def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores ):
+def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores)
     """
     args:
         P: Potência 
@@ -51,9 +51,9 @@ def fator_temperatura(condicao, temperatura_ambiente, temperaturas = tabela_temp
     returns: 
         Fator de temperatura.
     """
-    for temperaturas in temperaturas.iterrows():
-        temperatura_usada = getattr(temperaturas, condicao)
-        if getattr(temperaturas, condicao) > temperatura_ambiente:
+    for temperatura in temperaturas.itertuples():
+        temperatura_usada = getattr(temperatura, condicao)
+        if temperatura_usada > temperatura_ambiente:
             return temperatura_usada
 
 
@@ -109,4 +109,5 @@ if __name__ == "__main__":
     
     P=1550
     V=220
-    print(disjuntor(P,V))
+    print(disjuntor_inicial(P,V))
+    fator_temperatura('PVCSOLO', 30)
