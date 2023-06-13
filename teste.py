@@ -65,7 +65,7 @@ with entrada:
     temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
     local = st.selectbox("Local de Instalação", ["Parede","Chão","Teto"])
     if local == "Parede":
-        condição == "PCVAMBIENTE" 
+        condição = "PCVAMBIENTE" 
         print(condição)                
   with ajuda:
     st.markdown(''' 
