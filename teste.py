@@ -62,8 +62,10 @@ with entrada:
     potencia = st.number_input("Potência Total do Circuito", min_value=100, max_value=2000, value=1000)
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value=5)
     temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
-  
-  
+    local = st.selectbox("Local de Instalação, ["Parede","Chão","Teto"])
+    if local = "Parede":
+        condição == "PCVAMBIENTE" 
+        print(condição)                
   with ajuda:
     st.markdown(''' 
     ###### Sobre o Método:
