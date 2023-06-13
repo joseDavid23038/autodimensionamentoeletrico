@@ -123,7 +123,7 @@ with saida:
   mostrando o disjuntor mais adequado e a bitola do fio condutor ideal para o seu sistema.
   
   """)
-  disjuntor_inicial = disjuntores_inicial(potencia,tensao)
+  disjuntor_inicial = disjuntor_inicial(potencia,tensao)
   corrente = int(potencia/tensao)
   st.markdown(f'''
   #### A coorente minima que o disjuntor precisa aguentar: {disjuntor_inicial}
