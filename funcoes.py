@@ -24,7 +24,7 @@ def tabela_a_ser_usada(isolamento):
     return pd.read_excel(tabela_usada)
 
 
-def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores)
+def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores):
     """
     args:
         P: Potência 
@@ -78,6 +78,13 @@ def fator_correcao(agrupamento, temperatura):
     """
     return agrupamento*temperatura
 
+def bitola_min(tipo_instalacao):
+    if tipo_instalacao == "Iluminação":
+        bitola_min = 1.5
+    if tipo_instalacao == "Tomada de Uso Específico" or tipo_instalacao =="Tomadas de Uso Geral":
+        bitola_min = 2.5
+    return bitola_min
+
 def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     """
     args:
@@ -108,4 +115,24 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
 if __name__ == "__main__":
     
     '''metodo = "A1"
-    fator_temperatura('PVCSOLO', 30)
+    tipo_instalacao = "Iluminação"
+    tensao = 127
+    potencia = 500
+    num_circuitos = 4
+    isolamento = "PVC"
+    local = "Parede"
+    temperatura = 60 '''
+
+   
+    condicao = condicao_de_instalacao(isolamento,local)
+    disjuntores = tabela_disjuntores
+    disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
+    temperaturas = tabela_temperatura
+    ftemperatura = fator_temperatura(condicao, temperatura, temperaturas)
+    agrupamentos = tabela_agrupamento
+    agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos)
+    correcao = fator_correcao(agrupamento, ftemperatura)
+    bitola_mn = bitola_min(tipo_instalacao)
+    secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
+    print(secao)
+>>>>>>> ee0257c7f7bb2c229207def375e1ab045676f624
