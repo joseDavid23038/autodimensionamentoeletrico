@@ -70,12 +70,10 @@ with entrada:
     ###### Sobre o Método:
     ''')
     if st.button("?", type="primary", key="Método"):
-      st.markdown('''
-      O Método de Referencia se refere ao modo de instalação de todo o circuito.  
-      ![image](https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg)
-      
-      ''')
+      st.write("O Método de Referencia se refere ao modo de instalação de todo o circuito.")
       st.image("https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg")
+      st.write("Caso ainda haja duvidas consulte o material guia: [NBR5410](https://docente.ifrn.edu.br/jeangaldino/disciplinas/2015.1/instalacoes-eletricas/nbr-5410)")
+      
       
     st.markdown(''' 
     ###### Sobre a Tensão:
