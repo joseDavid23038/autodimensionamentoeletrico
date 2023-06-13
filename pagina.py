@@ -82,7 +82,7 @@ with entrada:
     ###### Sobre a Potência:
     ''')
     if st.button("?", type="primary", key="Potência"):
-      st.write("Potência é refetente a soma da potencial individual de todos os pontos de energização do circuito, por exmplo: Tomadas de uso geral, tomadas de uso especifico... Caso desconheça, clique em não sei e siga as instruções.")
+      st.write("Potência é referente a soma da potencia máxima individual de todos os pontos de energização do circuito, por exmplo: Tomadas de uso geral, tomadas de uso especifico... 
       
     st.markdown(''' 
     ###### Sobre o nº de Circuitos:
