@@ -1,7 +1,7 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
 #import funcoes
-from funcoes import *
+from funcoes import*
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
 st.set_page_config(page_title="Redimencionamento", layout="wide", page_icon="U&#x26A1;",initial_sidebar_state="collapsed")
