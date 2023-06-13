@@ -13,21 +13,6 @@ def disjuntor(P, V, disjuntores = tabela_disjuntores ):
         if getattr(linha, coluna) > I:
             return getattr(linha, coluna)
 
-def bitola(disjuntor, bitola_min, metodo, tabela = tabela_inicial):
-    bit = 'SEÇÃO'
-    I_max = tabela[metodo].values
-    fios = tabela[bit].values
-    finais = []
-    for valor in I_max:
-        if valor > disjuntor:
-            finais.append(valor)
-            break
-    for valor in fios:
-        if valor >= bitola_min:
-            finais.append(valor)
-            break
-    return finais
-
 # def dimensionar(tabela, metodo = 'B1', Bitola_min = 2.5, FT = 0.5, P = 1550, V = 220):
 def fator_temperatura(condição, temperatura_ambiente, temperatura = tabela_temperatura):
     for temperatura in temperatura.iterrows():
@@ -42,7 +27,22 @@ def fator_agrupamento(n_circuitos, metodo, agrupamento = tabela_agrupamento):
 def fator_correcao(agrupamento, temperatura):
     return agrupamento*temperatura
 
-    
+def bitola(disjuntor, bitola_min, metodo, correcao, tabela = tabela_inicial):
+    bit = 'SEÇÃO'
+    I_max = correcao * tabela[metodo].values
+    fios = tabela[bit].values
+    finais = []
+    for valor in I_max:
+        if valor > disjuntor:
+            finais.append(valor)
+            break
+    for valor in fios:
+        if valor >= bitola_min:
+            finais.append(valor)
+            break
+    return finais
+
+
 if __name__ == "__main__":
     
     P=1550
