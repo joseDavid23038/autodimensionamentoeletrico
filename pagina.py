@@ -57,7 +57,7 @@ with entrada:
   ''')
   variaveis, ajuda = st.columns([14,6])
   with variaveis:
-    tipo_instalacao = st.selectbox("Tipos de Instalação:", ["Iluminação","Tomadas de Uso Específico", "Tomadas de Uso Geral"])
+    tipo_instalacao = st.selectbox("Tipos de Instalação:", ["Iluminação","Tomada de Uso Específico", "Tomadas de Uso Geral"])
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"])
     tensao = st.selectbox("Tensão:", [127, 220,380])
     potencia = st.number_input("Potência Total do Circuito:", min_value=100, max_value=2000, value=1000)
