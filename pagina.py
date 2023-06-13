@@ -1,6 +1,6 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
-import funcoes
+#import funcoes
 
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
@@ -55,7 +55,7 @@ with entrada:
   ### Informe suas Variáveis:
   ###### Aba direcionada a receber as variaveis de seus circúitos.
   ''')
-  variaveis, ajuda = st.columns([4,1])
+  variaveis, ajuda = st.columns([14,6])
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"])
     tensao = st.selectbox("Tensão:", [127, 220,380])
