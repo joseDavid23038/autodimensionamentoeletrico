@@ -107,7 +107,5 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
 
 if __name__ == "__main__":
     
-    P=1550
-    V=220
-    print(disjuntor_inicial(P,V))
+    '''metodo = "A1"
     fator_temperatura('PVCSOLO', 30)
