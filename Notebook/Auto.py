@@ -26,9 +26,9 @@ def condicao_de_instalacao(isolamento,local):
 
 def tabela_a_ser_usada(isolamento):
     if isolamento == "PVC":
-        tabela_usada = "DOIS_COBRE_PVC.xlsx" 
+        tabela_usada = "Dados\DOIS_COBRE_PVC.xlsx" 
     if isolamento == "XLPE" or isolamento == "EPR":
-        tabela_usada = "DOIS_COBRE_EPR_XLPE.xlsx" 
+        tabela_usada = "Dados\DOIS_COBRE_EPR_XLPE.xlsx" 
     return tabela_usada
 
 #Chamando a função
@@ -40,13 +40,13 @@ import pandas as pd
 tabela_inicial = pd.read_excel(tabela_usada)
 #print(tabela_inicial)
 
-disjuntores = pd.read_excel("DISJUNTORES.xlsx")
+disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
 #print(disjuntores)
 
-temperatura = pd.read_excel("TEMPERATURA.xlsx")
+temperatura = pd.read_excel("Dados\TEMPERATURA.xlsx")
 #print(temperatura)
 
-agrupamento = pd.read_excel("AGRUPAMENTO.xlsx")
+agrupamento = pd.read_excel("Dados\AGRUPAMENTO.xlsx")
 
 
 #Fator de correção
