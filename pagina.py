@@ -57,22 +57,14 @@ with entrada:
   variaveis, ajuda = st.columns([4,1])
   with variaveis:
     condição = ""
-    metodo_usado = st.selectbox("Método", ["A1","A2", "B1","B2", "C", "D"])
+    metodo_usado = st.selectbox("Método de Instalação", ["A1","A2", "B1","B2", "C", "D"])
     tensao = st.selectbox("Tensão", [127, 220,380])
     potencia = st.number_input("Potência Total do Circuito", min_value=100, max_value=2000, value=1000)
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto", min_value=1, max_value=30, value=5)
     isolamento = st.selectbox("Tipo de Isolamento", ["PVC","XLPE","EPR"])
-    local = st.selectbox("Local de Instalação", ["Parede","Chão","Teto"])
-    if isolamento == "PVC" and local == "Parede":
-      condicao = "PCVAMBIENTE" 
-    if isolamento == "PVC" and local == "Chão":
-      condicao = "PVCSOLO"
-    if isolamento == "PVC" and local == "Teto":
-      condicao = "PCVAMBIENTE" 
-      
-      
-        
+    local = st.selectbox("Local de Instalação", ["Parede","Chão","Teto"])  
     temperatura = st.slider("Temperatura", min_value=0, max_value=50, value=25)
+    
   with ajuda:
     st.markdown(''' 
     ###### Sobre o Método:
@@ -84,38 +76,39 @@ with entrada:
     ###### Sobre a Tensão:
     ''')
     if st.button("?", type="primary", key="Tensão"):
-      st.write("A Tensão é referente a tensão de linha do seu circuito, consulte o seu provedor de energia caso desconheça")
+      st.write("A Tensão(DDP) é referente a tensão de linha do seu circuito, consulte o seu provedor de energia caso desconheça.")
       
     st.markdown(''' 
     ###### Sobre a Potência:
     ''')
     if st.button("?", type="primary", key="Potência"):
-      st.write("Informe a potência total do circuito, caso desconheca clique em não sei e siga as instruções")
+      st.write("Potência é refetente a soma da potencial individual de todos os pontos de energização do circuito, por exmplo: Tomadas de uso geral, tomadas de uso especifico... Caso desconheça, clique em não sei e siga as instruções.")
       
     st.markdown(''' 
-    ###### Sobre o Circuitos:
+    ###### Sobre o nº de Circuitos:
     ''')
     if st.button("?", type="primary", key="Circuitos"):
-      st.write("Informe o numero circuitos ou condutores dentro do eletroduto")
-    
-    st.markdown(''' 
-    ###### Sobre o Isolamento:
-    ''')
-    if st.button("?", type="primary", key="Circuitos"):
-      st.write("Informe o Tipo de material utilzado no isolamento dos condutores")
-      
-    st.markdown(''' 
-    ###### Sobre o Isolamento:
-    ''')
-    if st.button("?", type="primary", key="Circuitos"):
-      st.write("Informe o Tipo de material utilzado no isolamento dos condutores")
-      
+      st.write("Numero de circuitos ou condutores dentro do mesmo eletroduto.")
   
+    st.markdown(''' 
+    ###### Sobre o Isolamento:
+    ''')
+    if st.button("?", type="primary", key="Isolamento"):
+      st.write("Informe o Tipo de material utilzado no isolamento dos condutores.")
+      
+    st.markdown(''' 
+    ###### Sobre o Local:
+    ''')
+    if st.button("?", type="primary", key="Local"):
+      st.write("Informe o local por onde os eletrodutos, que contém seu circuito, passam, se estão contido na parede, no teto ou no chão.")
+      
     st.markdown(''' 
     ###### Sobre a Temperatura:
     ''')
     if st.button("?", type="primary", key="Temperatura"):
-      st.write("Informe a temperatura média do local da instalação, ou mesmo da sua região")
+      st.write("Temperatura média do local da instalação, ou mesmo da sua região/cidade.")
+      
+    
   
 #______________________________________________________________________________________________________________________________________________________________________________
 
