@@ -64,7 +64,7 @@ with entrada:
     tipo_instalacao = st.selectbox("Tipos de Instalação:", ["Iluminação","Tomada de Uso Específico", "Tomadas de Uso Geral"])
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"])
     tensao = st.selectbox("Tensão:", [127, 220,380])
-    potencia = st.number_input("Potência Total do Circuito:", min_value=100, max_value=2000, value=1000)
+    potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000)
     num_circuitos = st.number_input("Circuitos no mesmo eletrodulto:", min_value=1, max_value=30, value=5)
     isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"])
     local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"])  
