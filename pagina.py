@@ -12,19 +12,23 @@ st.set_page_config(page_title="Redimencionamento", layout="wide", page_icon="U&#
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
 bar.title("Contato:")
-bar.write("Envie para nós suas dúvidas ou sugestões por e-mail!")
-bar.write("Houve algum erro durante a utilização? Nos informe.")
-bar.write("e-mails: danielbravin@hotmail.com")
-bar.write("emelyn.a.ilum@gmail.com") 
-bar.write("[GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)")
+bar.write('''
+Envie suas dúvidas ou sugestões par nós por e-mail!
+Houve algum erro durante a utilização? Nos informe.
+e-mails para contato: 
+danielbravin@hotmail.com
+emelyn.a.ilum@gmail.com
+programming.gustamatos@gmail.com 
+[GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)
+''') #Adicionar e-mail do José David!!!
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.title("Redimencionamento De Circuitos")   # Essa função define um titulo, basicamente, uma string com uma edição específica.
+st.title("Redimencionamento De Circuitos")   # Essa função define um título, basicamente, uma string com uma edição específica.
 
-st.divider()                   #A função "diviser" é usada para criar um corte cinza na tela, meramente para melhor oragnização dos itens. 
+st.divider()                   #A função "divider" é usada para criar um corte cinza na tela, meramente para melhor organização dos itens. 
 
-with st.expander("About Us"):  #Aqui a função expander, cria um item que ao ser clicado se expande mostrando quaisquer itens que se deja, seja um texto ou um botão.  
+with st.expander("About Us"):  #Aqui a função expander, cria um item que ao ser clicado se expande mostrando quaisquer itens que se deseja, seja um texto ou um botão.  
   st.markdown("""
   # Sobre o Projeto:
 
