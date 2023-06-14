@@ -29,6 +29,7 @@ Nosso projto é dividido em duas principais partes:
   1. Apresentação do projeto - Destinada à introdução do projeto, com o objetivo deste e informações gerais sobre os integrantes. 
   2. Área de coleta de dados - Destinada à coleta de dados dos usuário. Os dados coletados serão: método de referência (baseado nos métodos de instalação), tensão, potência total, temperatura do ambiente (°C), tipo de isolameto (PCV, EPR ou XLEP), número de circuitos no eletroduto e local de instalação (chão, teto ou parede). 
   3. Resposta às variáveis dadas pelo usuário - Área designada somente para fornecer o disjuntor e a área da seção transversal do fio a serem utilizados nas instalações.
+  Link do site com o programa rodando parcialmente: https://emelyn23017-autodimensionamentoeletrico-pagina-ijjg9l.streamlit.app/ 
   
   B) *Análise de dados:* Usando as variáveis disponibilizadas pelo usuário, relacionará estas com a NBR5410. Esta comparação, nos indicará qual será o disjuntor e a seção transversal do condutor mais indicados para o tipo de instalação especificado. A análise de dados será realizada a partir do programa em Python. 
 
@@ -44,9 +45,3 @@ Até o momento, já conseguimos desenvolver um código funcional que recebe uma 
 
 ##### ANÁLISE (Back-end):
 Ainda é preciso organizar corretamente as funções em um arquivo definitivo em .py e comentar o código.
-
-Observações do James: *Apagar depois* 
-Melhorar a descrição 
-Link do streamit não abriu - Adicionar o link certo no readme 
-Nome dos Autores no Readme
-Código não foi rodado: ft não estava definida
