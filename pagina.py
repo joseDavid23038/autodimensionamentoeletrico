@@ -12,8 +12,10 @@ st.set_page_config(page_title="Redimencionamento", layout="wide", page_icon="U&#
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
 bar = st.sidebar
 bar.title("Contato:")
-bar.write("Envie erros, duvidas ou sugestões no email caso haja alguma pendência")
-bar.write("email: danielbravin@hotmail.com")
+bar.write("Envie para nós suas dúvidas ou sugestões por e-mail!")
+bar.write("Houve algum erro durante a utilização? Nos informe.")
+bar.write("e-mails: danielbravin@hotmail.com")
+bar.write("emelyn.a.ilum@gmail.com") 
 bar.write("[GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)")
 
 #_______________________________________________________________________________________________________________________________________________________________________________
