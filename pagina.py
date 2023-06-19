@@ -24,7 +24,7 @@ programming.gustamatos@gmail.com
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.title("Redimensionamento de Circuitos")   # Essa função define um título, basicamente, uma string com uma edição específica.
+st.title("Autodimensionamento elétrico - redimensionamento de circuitos residenciais")   # Essa função define um título, basicamente, uma string com uma edição específica.
 
 st.divider()                   #A função "divider" é usada para criar um corte cinza na tela, meramente para melhor organização dos itens. 
 
