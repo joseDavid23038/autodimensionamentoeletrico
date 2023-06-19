@@ -34,9 +34,9 @@ with st.expander("About Us"):  #Aqui a função expander, cria um item que ao se
 
   ### Esse projeto foi criado a fim de auxiliar o dimensionamento de circuitos elétricos residenciais no Brasil. 
   Com o objetivo de evitar possíveis acidentes ocasionados por desinstrução ou falha humana e facilitar o cálculo de dimensionamento elétrico, 
-  criamos este site para que você possa analizar as variáveis necessárias para o dimesionamento,
-  nos as comparamos com a NBR5410 e, como resultado, indicamos para você o disjuntor e da seção transversal do fio a serem utilizados na sua casa! 
-  Autodimensione e fique em segurança! 
+  criamos este site para que você possa fazer o autodimensionamento elétrico da sua casa! Nós analizamos as variáveis necessárias para o dimesionamento,
+  as comparamos com a NBR5410 e, como resultado, indicamos para você o disjuntor e da seção transversal do fio a serem utilizados na sua casa! 
+  Autodimensione e fique seguro! 
   
   Criadores e idealizadores:  
   - Daniel Bravin  
