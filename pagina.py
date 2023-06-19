@@ -129,7 +129,7 @@ with saida:
   st.markdown("""
   # Resultado do Redimensionamento:
 
-  Foi simples não foi? Aqui estão o disjuntor mais adequado e a seção transversal ideal do fio para seu sistema!
+  Aqui estão o disjuntor mais adequado e a seção transversal ideal do fio para seu sistema!
   A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
 
   """)
