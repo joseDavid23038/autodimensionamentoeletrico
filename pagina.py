@@ -13,7 +13,7 @@ st.set_page_config(page_title="Redimensionamento", layout="wide", page_icon="U&#
 bar = st.sidebar
 bar.title("Contato:")
 bar.write('''
-Envie suas dúvidas ou sugestões par nós por e-mail!
+Envie suas dúvidas ou sugestões para nós por e-mail!
 Houve algum erro durante a utilização? Nos informe.
 e-mails para contato: 
 danielbravin@hotmail.com
@@ -32,7 +32,11 @@ with st.expander("About Us"):  #Aqui a função expander, cria um item que ao se
   st.markdown("""
   # Sobre o Projeto:
 
-  ### Esse projeto foi criado a fim de auxiliar o dimensionamento de circuitos elétricos residenciais. 
+  ### Esse projeto foi criado a fim de auxiliar o dimensionamento de circuitos elétricos residenciais no Brasil. 
+  Com o objetivo de evitar possíveis acidentes ocasionados por desinstrução ou falha humana e facilitar o cálculo de dimensionamento elétrico, 
+  criamos este site para que você possa analizar as variáveis necessárias para o dimesionamento,
+  nos as comparamos com a NBR5410 e, como resultado, indicamos para você o disjuntor e da seção transversal do fio a serem utilizados na sua casa! 
+  Autodimensione e fique em segurança! 
   
   Criadores e idealizadores:  
   - Daniel Bravin  
@@ -40,7 +44,7 @@ with st.expander("About Us"):  #Aqui a função expander, cria um item que ao se
   - Emelyn Alves
   - José David  
   
-  """) #Expandir a motivação da criação do projeto, utilizar uma linguagem um pouco menos formal a fim de criar uma maior proximidade com o usuário. 
+  """) #Expandir a motivação da criação do projeto (porque criamos o projeto), utilizar uma linguagem um pouco menos formal a fim de criar uma maior proximidade com o usuário. 
 st.divider()  
 
 
@@ -50,21 +54,21 @@ entrada, saida = st.tabs(["Dados","Resultado"])  # Criando Duas telas, Entrada, 
 with entrada:
   st.markdown('''
 
-    # Bem-vindo!
+    # Bem-vind@!
 
-    Essa aba é direcionada a armazenar as informações do seu circuito elétrico, que serão usadas para encontrar o disjuntor e bitola do fio (seção transversal) ideais para o seu sistema.
-    Lembre-se: A armação e montagem de todo aparato elétrico deve ser realizada por um profissional, nosso trabalho é encontrar uma escala de produto que satisfaça suas necessidades.
-    Contudo, o material e contas disponibilizados ainda assim devem ser revisados por um profisional certificado.  
+    Essa aba é direcionada para armazenar as informações do seu circuito elétrico, que serão usadas para encontrar o disjuntor e bitola do fio (seção transversal) ideais para o seu sistema.
+    Lembre-se: A armação e montagem de todo aparato elétrico deve ser realizada por um profissional, nosso trabalho é apenas encontrar uma escala de produto que satisfaça suas necessidades.
+    Contudo, o material e contas disponibilizados ainda devem ser revisados por um profisional certificado. Vamos começar? 
 
     ''')
   st.markdown('''
-  ### Informe suas Variáveis:
-  ###### Aba direcionada a receber as variáveis de seus circúitos.
+  ### Informe suas variáveis:
+  ###### Essa aba receberá as variáveis de seus circuitos. Atente-se aos dados! 
   ''')
   variaveis, ajuda = st.columns([14,6])
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"])
-    tensao = st.selectbox("Tensão:", [127, 220,380])
+    tensao = st.selectbox("Tensão:", [127, 220, 380])
     potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000)
     num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5)
     isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"])
@@ -124,10 +128,10 @@ with entrada:
 with saida:
   st.markdown("""
   # Resultado do Redimensionamento:
-  
-  Essa aba é direcionada à mostrar o resultado do redimensionameto do circuito dado, aqui ficarão expostas as conclusões do trabalho,
-  mostrando o disjuntor mais adequado e a bitola do fio condutor ideal para o seu sistema.
-  
+
+  Foi simples não foi? Aqui estão o disjuntor mais adequado e a seção transversal ideal do fio para seu sistema!
+  A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
+
   """)
   disjuntor_inicial = disjuntor_inicial(potencia,tensao)
   corrente = int(potencia/tensao)
