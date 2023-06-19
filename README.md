@@ -23,7 +23,7 @@ Serão utilizadas para nosso dimensionamento elétrico 5 diferentes tabelas da N
 
 #### Sobre o projeto de autodimensionamento elétrico: 
 
-Nosso projto é dividido em duas principais partes: 
+Nosso projeto é dividido em duas principais partes: 
 
   A) *Interface:* Será a rosto do nosso programa e a responsável por coletar os dados do esquema elétrico do usuário. Utilizaremos o site Streamlit para criá-la. Pretendemos fazer uma interface acessível e intuitiva. Até o momento, pretendemos fazer a inteface dividida em três partes principais: 
   1. Apresentação do projeto - Destinada à introdução do projeto, com o objetivo deste e informações gerais sobre os integrantes. 
