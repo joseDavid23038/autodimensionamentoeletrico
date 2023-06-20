@@ -75,7 +75,7 @@ with entrada:
   #Coluna das variáveis__________________________________________________________________________________________________________
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"]) #Cria uma caixa de seleção com os tipos de métodos de instalação dos circuitos (6 possíveis escolhas)
-    tipo_instalacao = st.selectbox("Tipo de Instalação:", ["Iluminação","Tomadas de Uso Específicos", "Tomadas de Uso Geral"]) #Cria uma caixa de seleção com os tipos de instalação dos circuitos (3 possíveis escolhas)
+    tipo_instalacao = st.selectbox("Tipo de Instalação:", ["Iluminação","Tomadas de Uso Específico", "Tomadas de Uso Geral"]) #Cria uma caixa de seleção com os tipos de instalação dos circuitos (3 possíveis escolhas)
     tensao = st.selectbox("Tensão:", [127, 220, 380]) #Cria uma caixa de seleção com as tensões possíveis para os circuitos (3 possíveis escolhas)
     potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000) #Cria uma entrada para números inteiros que variam de 60 a 8500, sendo o valor padrão: 2000 (valores de potência total)
     num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5) #Cria uma entrada para números inteiros que variam de 1 a 30, sendo o padrão: 5 (números de circuitos em um mesmo eletroduto) 
@@ -141,9 +141,9 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   Aqui estão o disjuntor mais adequado e a seção transversal ideal do fio para seu sistema!
   A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
 
-  """)
+  """) 
+   # Abaixo estamos definindo algumas outras variaveis usando as funções importadas do "funcoes.py" e da aba "entrada".
   disjuntores = tabela_disjuntores
-  
   condicao = condicao_de_instalacao(isolamento,local)
   disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
   ftemperatura = fator_temperatura(condicao, temperatura_ambiente)
@@ -151,11 +151,12 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   correcao = fator_correcao(agrupamento, ftemperatura)
   bitola_mn = bitola_min(tipo_instalacao)
   secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
-  
+
+  # Abaixo é a caixa de texto que irá conter os valores de retorno e finais do nosso codigo, capacidade do disjuntor e seção do fio. 
   st.markdown(f'''
   #### O disjuntor ideal para esse circuito deve ser de {int(disjuntor)} A.
   
-  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm, nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
+  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm², nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
 
   ''') 
   # O resultado ainda é apenas um teste 
