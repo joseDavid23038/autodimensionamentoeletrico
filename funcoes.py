@@ -47,8 +47,6 @@ def fator_temperatura(condicao, temperatura_ambiente):
     args:
         condicao: Condição de instalação
         temperatura_ambiente: Temperatura média do amibiente. 
-        temperaturas: A tabela de temperatura a ser usada na análise.
-    returns: 
         Fator de temperatura.
     """
     coluna_temperatura = 'TEMPERATURA'
@@ -95,11 +93,11 @@ def bitola_min(tipo_instalacao): # Essa função determina o valor mínimo a ser
 def bitola(disjuntor, bitola_min, metodo, correcao, isolamento): 
     """
     args:
-        disjuntor: 
-        bitola_min: 
-        metodo: Método de instalação
-        correcao: 
-        isolamento:
+        disjuntor: A bitola deve suportar uma corrente superior a que desarma disjuntor e por isso, o disjuntor é o referencial inicial para o bitola
+        bitola_min: circuitos de iluminação têm bitola mínima de 1,5mm enquanto os de tomada têm de 2,5mm. Isso serve para as pessoas não pegarem fio mais fino.
+        metodo: Método de instalação 
+        correcao: O fator de correção reduz o 
+        isolamento: Referente ao tipo de isolamento. Se o fio é de EPR ou PVC, isso implica sobre o aquecimento e o fator de correção deste.
     returns: 
         finais: lista com disjuntor final e tamanho ideal de bitola.
     """
@@ -131,7 +129,8 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
 
 
 if __name__ == "__main__":
-   
+    #Esse parte serve apenas como teste de funcionamento das funções
+   '''''
     metodo = "A1"
     tipo_instalacao = "Iluminação"
     tensao = 127
@@ -141,7 +140,7 @@ if __name__ == "__main__":
     local = "Parede"
     temperatura_ambiente = 55 
 
-   
+
     condicao = condicao_de_instalacao(isolamento,local)
     disjuntores = tabela_disjuntores
     disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
@@ -152,3 +151,4 @@ if __name__ == "__main__":
     bitola_mn = bitola_min(tipo_instalacao)
     secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
     print(secao[1])
+    '''''
