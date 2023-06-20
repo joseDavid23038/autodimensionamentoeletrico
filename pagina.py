@@ -171,7 +171,7 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   st.markdown(f'''
   #### O disjuntor ideal para esse circuito deve ser de {int(disjuntor)} A.
   
-  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm², nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
+  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm², nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} amperes sem aquecer.
 
   ''') 
   # __________________________________________________________________________________________________________________________________________________________________________________________________
