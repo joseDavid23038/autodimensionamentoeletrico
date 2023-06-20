@@ -3,12 +3,12 @@ import numpy as np
 import os
 
 arr = str(os.listdir('Dados'))
-pd.read_excel(arr)
+# pd.read_excel(arr)
 
 
-tabela_agrupamento = pd.read_excel("Dados\AGRUPAMENTO.xlsx")
-tabela_disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
-tabela_temperatura = pd.read_excel("Dados\TEMPERATURA.xlsx")
+tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
+tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
+tabela_temperatura = pd.read_excel("Dados/TEMPERATURA.xlsx")
 
 def condicao_de_instalacao(isolamento,local):
     if isolamento == "PVC" and (local == "Teto" or local =="Parede"):
