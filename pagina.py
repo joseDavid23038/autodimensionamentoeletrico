@@ -72,6 +72,7 @@ with entrada:
   #Coluna das variáveis__________________________________________________________________________________________________________
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"]) #Cria uma caixa de seleção com os tipos de métodos de instalação dos circuitos (6 possíveis escolhas)
+    tipo_instalacao = st.selectbox("Tipo de Instalação:", ["Iluminação","Tomadas de Uso Específicos", "Tomadas de Uso Geral"]) #Cria uma caixa de seleção com os tipos de instalação dos circuitos (3 possíveis escolhas)
     tensao = st.selectbox("Tensão:", [127, 220, 380]) #Cria uma caixa de seleção com as tensões possíveis para os circuitos (3 possíveis escolhas)
     potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000) #Cria uma entrada para números inteiros que variam de 60 a 8500, sendo o valor padrão: 2000 (valores de potência total)
     num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5) #Cria uma entrada para números inteiros que variam de 1 a 30, sendo o padrão: 5 (números de circuitos em um mesmo eletroduto) 
@@ -138,10 +139,17 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
 
   """)
-  disjuntor_inicial = disjuntor_inicial(potencia,tensao)
-  corrente = int(potencia/tensao)
+  condicao = condicao_de_instalacao(isolamento,local)
+  disjuntores = tabela_disjuntores
+  disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
+  ftemperatura = fator_temperatura(condicao, temperatura_ambiente)
+  agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos = tabela_agrupamento)
+  correcao = fator_correcao(agrupamento, ftemperatura)
+  bitola_mn = bitola_min(tipo_instalacao)
+  secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
+  #print(secao[0])
   st.markdown(f'''
-  #### A corrente mínima que o disjuntor precisa aguentar: {disjuntor_inicial}
+  #### A corrente mínima que o disjuntor precisa aguentar: {condicao}
   
   ''') 
   # O resultado ainda é apenas um teste 
