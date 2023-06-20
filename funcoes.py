@@ -85,14 +85,14 @@ def fator_correcao(agrupamento, temperatura):
     """
     return agrupamento*temperatura
 
-def bitola_min(tipo_instalacao): #Essa função determina o valor mínimo a ser comparado na função seguinte. Apenas usada em lógica interna.
+def bitola_min(tipo_instalacao): # Essa função determina o valor mínimo a ser comparado na função seguinte. Apenas usada em lógica interna.
     if tipo_instalacao == "Iluminação": 
         bitola_min = 1.5
     if tipo_instalacao == "Tomadas de Uso Específico" or tipo_instalacao =="Tomadas de Uso Geral":
         bitola_min = 2.5
     return bitola_min
     
-def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
+def bitola(disjuntor, bitola_min, metodo, correcao, isolamento): 
     """
     args:
         disjuntor: 
@@ -112,12 +112,16 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     I_max = correcao * tabela[metodo].values
     fios = tabela[bit].values
     finais = []
+
+    # checa a tabela até achar o valor certo de corrente, 
+    # e então, na mesma linha, seleciona o tamanho do fio.
     for valor, secao in zip(I_max, fios):
         if valor > disjuntor:
             finais.append(valor)
             if secao >= bitola_min:
                 finais.append(secao)
             else:
+                # Isso é pra caso o tamanho observado seja menor que o mínimo
                 for valor in fios:
                     if valor >= bitola_min:
                         finais.append(valor)
