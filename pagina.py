@@ -153,7 +153,7 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
   
   st.markdown(f'''
-  #### A secao transversal da sua bitola deve ser igual ou superior a: {secao}
+  #### A secao transversal da sua bitola deve ser igual ou superior a: {secao[1], nessas condições esse condutor suporta uma corrente aproximadad de : {int(secao[0]) A}
   
   ''') 
   # O resultado ainda é apenas um teste 
