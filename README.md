@@ -3,6 +3,7 @@
 
 #### Descrição geral: 
 O código 'funcoes.py' utiliza as variáveis dadas como coordenadas para encontrar valores em tabelas através da biblioteca pandas. Já o código 'página.py', é onde estão as configurações da interface que utilizamos, além disso, ele se comunica com o código 'funcoes.py', *retornando o disjuntor e a seção tranversal do fio para utilizar no dimensionamento elétrico residencial.* 
+Link do Streamlit: https://emelyn23017-autodimensionamentoeletrico-pagina-ijjg9l.streamlit.app/ 
 
 #### Introdução: 
 O trabalho técnico referente ao dimensionamento elétrico costuma ocorrer por análise manual de dados. Essa análise geralmente é realizada com base no número de circuitos, métodos de instalação e outras condições identificadas na planta elétrica do local. Por isso, quando não realizada por profissionais a instalação está passível à riscos, que comprometem a segurança do local e da própria instalação. Com o objetivo de evitar possíveis acidentes ocasionados por desinstrução ou falha humana e facilitar o cálculo de dimensionamento elétrico, pretendemos criar um código em python, que utilize as biliotecas Pandas, para analisar as variáveis necessárias para o dimesionamento, compara-las com a Norma Regulamentadora vigente (NBR5410) e retornar as especificações do disjuntor e da seção transversal do fio a serem utilizados.
