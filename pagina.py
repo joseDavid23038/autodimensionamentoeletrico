@@ -153,8 +153,9 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
   
   st.markdown(f'''
-  #### A secao transversal da sua bitola deve ser igual ou superior a: {secao[1]} mm, nessas condições esse condutor suporta uma corrente aproximadad de : {int(secao[0])} A.
+  #### O disjuntor ideal para esse circuito deve ser de {int(disjuntor)} A.
+  
+  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm, nas condições selecionadas esse condutor suporta uma corrente aproximadad de : {int(secao[0])} A sem aquecer.
 
-  #### O disjuntor ideal deve ser de {int(disjuntor)} A.
   ''') 
   # O resultado ainda é apenas um teste 
