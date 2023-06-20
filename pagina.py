@@ -1,6 +1,14 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
 #Importando funcoes.py
+
+import pandas as pd
+import numpy as np
+
+tabela_agrupamento = pd.read_excel("Dados\AGRUPAMENTO.xlsx")
+tabela_disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
+tabela_temperatura = pd.read_excel("Dados\TEMPERATURA.xlsx")
+
 from funcoes import *
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
