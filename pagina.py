@@ -82,7 +82,11 @@ with entrada:
     isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"]) #Cria uma caixa de selação com os tipos de isolamentos possíveis: PVC, XLPE e EPR (3 possíveis escolhas)
     local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"]) #Cria uma caixa de seleção com o local de instalação possível: Parede, chão ou teto (3 possíveis escolhas)
     temperatura_ambiente = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
-    
+
+    st.makdown('''
+    ##### Para visualizar seu resultado suba a tela e clique na aba "Resultado".
+    ''')
+  
   #Coluna dos botões de ajuda______________________________________________________________________________________________________
   with ajuda:              #A coluna ajuda está organizada com as descrições das variáveis necessárias para o dimensionamento.
     st.markdown(''' 
