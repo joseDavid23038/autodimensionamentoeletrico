@@ -4,7 +4,7 @@ import streamlit as st
 import os
 import pandas as pd
 
-arr = os.listdir()
+arr = str(os.listdir())
 pd.read_excel(arr)
 
 from funcoes import *
