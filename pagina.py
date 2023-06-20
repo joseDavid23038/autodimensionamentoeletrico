@@ -19,10 +19,10 @@ bar.write('''
 Envie suas dúvidas ou sugestões para nós por e-mail!
 Houve algum erro durante a utilização? Nos informe. \n  
 e-mails para contato: 
-[Daniel]'danielbravin@hotmail.com'
-emelyn.a.ilum@gmail.com
-programming.gustamatos@gmail.com 
-jose23038@ilum.cnpem.br
+(Daniel)(danielbravin@hotmail.com)
+(Emelyn)(emelyn.a.ilum@gmail.com)
+(Gustavo)(programming.gustamatos@gmail.com) 
+(José)(jose23038@ilum.cnpem.br)
 [GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)
 ''')
 
