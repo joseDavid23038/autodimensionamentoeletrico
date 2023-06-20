@@ -80,11 +80,11 @@ with entrada:
     temperatura = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
     
   #Coluna dos botões de ajuda______________________________________________________________________________________________________
-  with ajuda:
+  with ajuda:              #A coluna ajuda está organizada com as descrições das variáveis necessárias para o dimensionamento.
     st.markdown(''' 
     ###### Sobre o Método:
     ''')
-    if st.button("?", type="primary", key="Método de referência"):
+    if st.button("?", type="primary", key="Método de referência"): #Cria um botão de ajuda 
       st.write("O Método de referência é o modo de instalação do seu circuito.")
       st.image("https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg")
       st.markdown("Caso ainda haja dúvidas, consulte o material-guia: [NBR5410](https://docente.ifrn.edu.br/jeangaldino/disciplinas/2015.1/instalacoes-eletricas/nbr-5410?page=30) (Informações sobre os tipos de métodos se encontram a partir da página 98)")
@@ -130,7 +130,7 @@ with entrada:
 
 
 # Criando a Aba de Saída de Dados______________________________________________________________________________________________________________________________________________
-with saida:
+with saida:   #A aba de Resultados apresenta os resultados a partir das funções importadas do arquivo 'funcoes.py' e das variáveis adicionadas pelo usuário na aba 'Dados'
   st.markdown("""
   # Resultado do Redimensionamento:
 
@@ -143,4 +143,5 @@ with saida:
   st.markdown(f'''
   #### A corrente mínima que o disjuntor precisa aguentar: {disjuntor_inicial}
   
-  ''') # O resultado ainda é apenas um teste 
+  ''') 
+  # O resultado ainda é apenas um teste 
