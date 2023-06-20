@@ -34,7 +34,7 @@ def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores ):
         O disjuntor adequado para as condições especificadas.
     """
     I = P/V
-    for linha in disjuntores.itertuples():
+    for linha in disjuntores.itertuples(): # Itera linha por linha na tabela de disjuntores
         coluna = "DISJUNTOR"
         if getattr(linha, coluna) > I:
             return getattr(linha, coluna)
@@ -85,8 +85,8 @@ def fator_correcao(agrupamento, temperatura):
     """
     return agrupamento*temperatura
 
-def bitola_min(tipo_instalacao):
-    if tipo_instalacao == "Iluminação":
+def bitola_min(tipo_instalacao): #Essa função determina o valor mínimo a ser comparado na função seguinte. Apenas usada em lógica interna.
+    if tipo_instalacao == "Iluminação": 
         bitola_min = 1.5
     if tipo_instalacao == "Tomadas de Uso Específico" or tipo_instalacao =="Tomadas de Uso Geral":
         bitola_min = 2.5
