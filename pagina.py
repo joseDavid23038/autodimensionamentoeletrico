@@ -1,6 +1,6 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
-#import funcoes
+#Importando funcoes.py
 from funcoes import *
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
@@ -10,8 +10,8 @@ st.set_page_config(page_title="Redimensionamento", layout="wide", page_icon="U&#
 
 
 # Criando uma Barra Lateral ________________________________________________________________________________________________________________________________________________________
-bar = st.sidebar
-bar.title("Contato:")
+bar = st.sidebar 
+bar.title("Contato:") #Adicionamos o contato para que o usuário possa sanar suas dúvidas, além da página do github para que possa ver como o código foi estruturado
 bar.write('''
 Envie suas dúvidas ou sugestões para nós por e-mail!
 Houve algum erro durante a utilização? Nos informe.
@@ -19,12 +19,13 @@ e-mails para contato:
 danielbravin@hotmail.com
 emelyn.a.ilum@gmail.com
 programming.gustamatos@gmail.com 
+jose23038@ilum.cnpem.br
 [GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)
-''') #Adicionar e-mail do José David!!!
+''')
 
 #_______________________________________________________________________________________________________________________________________________________________________________
 
-st.title("Autodimensionamento elétrico")   # Essa função define um título, basicamente, uma string com uma edição específica.
+st.title("Autodimensionamento elétrico")   #Essa função define um título, basicamente, uma string com uma edição específica.
 
 st.divider()                   #A função "divider" é usada para criar um corte cinza na tela, meramente para melhor organização dos itens. 
 
@@ -44,14 +45,14 @@ with st.expander("About Us"):  #Aqui a função expander, cria um item que ao se
   - Emelyn Alves
   - José David  
   
-  """) #Expandir a motivação da criação do projeto (porque criamos o projeto), utilizar uma linguagem um pouco menos formal a fim de criar uma maior proximidade com o usuário. 
+  """) 
 st.divider()  
 
 
-entrada, saida = st.tabs(["Dados","Resultado"])  # Criando Duas telas, Entrada, Saída *mudança para Dados e Resultado, respectivamente. 
+entrada, saida = st.tabs(["Dados","Resultado"])  # Criando Duas telas, Dados e Resultado, respectivamente. 
 
-# Criando a aba Entrada________________________________________________________________________________________________________________________________________________________
-with entrada:
+# Criando a aba Dados________________________________________________________________________________________________________________________________________________________
+with entrada: 
   st.markdown('''
 
     # Bem-vind@!
@@ -65,16 +66,20 @@ with entrada:
   ### Informe suas variáveis:
   ###### Essa aba receberá as variáveis de seus circuitos. Atente-se aos dados! 
   ''')
-  variaveis, ajuda = st.columns([14,6])
+  
+  variaveis, ajuda = st.columns([14,6]) #Cria duas colunas, uma que receberá as variáveis do circuito e outra com botões de ajuda 
+  
+  #Coluna das variáveis__________________________________________________________________________________________________________
   with variaveis:
-    metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"])
-    tensao = st.selectbox("Tensão:", [127, 220, 380])
-    potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000)
-    num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5)
-    isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"])
-    local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"])  
-    temperatura = st.slider("Temperatura:", min_value=0, max_value=50, value=25)
+    metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"]) #Cria uma caixa de seleção com os tipos de métodos de instalação dos circuitos (6 possíveis escolhas)
+    tensao = st.selectbox("Tensão:", [127, 220, 380]) #Cria uma caixa de seleção com as tensões possíveis para os circuitos (3 possíveis escolhas)
+    potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000) #Cria uma entrada para números inteiros que variam de 60 a 8500, sendo o valor padrão: 2000 (valores de potência total)
+    num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5) #Cria uma entrada para números inteiros que variam de 1 a 30, sendo o padrão: 5 (números de circuitos em um mesmo eletroduto) 
+    isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"]) #Cria uma caixa de selação com os tipos de isolamentos possíveis: PVC, XLPE e EPR (3 possíveis escolhas)
+    local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"]) #Cria uma caixa de seleção com o local de instalação possível: Parede, chão ou teto (3 possíveis escolhas)
+    temperatura = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
     
+  #Coluna dos botões de ajuda______________________________________________________________________________________________________
   with ajuda:
     st.markdown(''' 
     ###### Sobre o Método:
@@ -139,5 +144,3 @@ with saida:
   #### A corrente mínima que o disjuntor precisa aguentar: {disjuntor_inicial}
   
   ''') # O resultado ainda é apenas um teste 
-
-
