@@ -7,7 +7,7 @@ arr = str(os.listdir('Dados'))
 pip.main(['install', 'openpyxl'])
 
 tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
-tabela_disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
+tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
 tabela_temperatura = pd.read_excel("Dados/TEMPERATURA.xlsx")
 
 def condicao_de_instalacao(isolamento,local):
@@ -110,9 +110,9 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     """
     tabela_usada = tabela_a_ser_usada(isolamento)
     if tabela_usada == "DOIS_COBRE_PVC.xlsx":
-        tabela = pd.read_excel("Dados\DOIS_COBRE_PVC.xlsx")
+        tabela = pd.read_excel("Dados/DOIS_COBRE_PVC.xlsx")
     if tabela_usada == "DOIS_COBRE_EPR_XLPE.xlsx":
-        tabela = pd.read_excel("Dados\DOIS_COBRE_EPR_XLPE.xlsx")
+        tabela = pd.read_excel("Dados/DOIS_COBRE_EPR_XLPE.xlsx")
     bit = 'SEÇÃO'
     I_max = correcao * tabela[metodo].values
     fios = tabela[bit].values
