@@ -139,15 +139,16 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
 
   """)
-  condicao = condicao_de_instalacao(isolamento,local)
   disjuntores = tabela_disjuntores
+  '''condicao = condicao_de_instalacao(isolamento,local)
+  
   disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
   ftemperatura = fator_temperatura(condicao, temperatura_ambiente)
   agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos = tabela_agrupamento)
   correcao = fator_correcao(agrupamento, ftemperatura)
   bitola_mn = bitola_min(tipo_instalacao)
   secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
-  #print(secao[0])
+  #print(secao[0])'''
   st.markdown(f'''
   #### A corrente mínima que o disjuntor precisa aguentar: {condicao}
   
