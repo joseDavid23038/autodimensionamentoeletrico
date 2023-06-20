@@ -3,12 +3,12 @@ import streamlit as st
 #Importando funcoes.py
 import os
 import pandas as pd
-
 from funcoes import *
+#______________________________________________________________________________________________________________________________________________________________________________________
+
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
 st.set_page_config(page_title="Redimensionamento", layout="wide", page_icon="U&#x26A1;",initial_sidebar_state="collapsed")
-
 #______________________________________________________________________________________________________________________________________________________________________________
 
 
@@ -25,9 +25,10 @@ e-mails para contato:
 (José)(jose23038@ilum.cnpem.br)
 [GitHub da Página](https://github.com/MrBravin/autodimensionamentoeletrico/edit/main/teste.py)
 ''')
-
 #_______________________________________________________________________________________________________________________________________________________________________________
 
+
+# Criando o título e primeiras mensagens_______________________________________________________________________________________________________________________________________________
 st.title("Autodimensionamento elétrico")   #Essa função define um título, basicamente, uma string com uma edição específica.
 
 st.divider()                   #A função "divider" é usada para criar um corte cinza na tela, meramente para melhor organização dos itens. 
@@ -50,11 +51,11 @@ with st.expander("About Us"):  #Aqui a função expander, cria um item que ao se
   
   """) 
 st.divider()  
-
-
 entrada, saida = st.tabs(["Dados","Resultado"])  # Criando Duas telas, Dados e Resultado, respectivamente. 
+#________________________________________________________________________________________________________________________________________________________________________________________
 
-# Criando a aba Dados________________________________________________________________________________________________________________________________________________________
+
+# Criando a aba Dados_____________________________________________________________________________________________________________________________________________________________________
 with entrada: 
   st.markdown('''
 
@@ -71,8 +72,10 @@ with entrada:
   ''')
   
   variaveis, ajuda = st.columns([14,6]) #Cria duas colunas, uma que receberá as variáveis do circuito e outra com botões de ajuda 
+  #_______________________________________________________________________________________________________________________________________________________________________________________________
+
   
-  #Coluna das variáveis__________________________________________________________________________________________________________
+  #Coluna das variáveis_____________________________________________________________________________________________________________________________________________________________________________
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"]) #Cria uma caixa de seleção com os tipos de métodos de instalação dos circuitos (6 possíveis escolhas)
     tipo_instalacao = st.selectbox("Tipo de Instalação:", ["Iluminação","Tomadas de Uso Específico", "Tomadas de Uso Geral"]) #Cria uma caixa de seleção com os tipos de instalação dos circuitos (3 possíveis escolhas)
@@ -88,8 +91,10 @@ with entrada:
     st.markdown('''
     ##### Para visualizar seu resultado suba a tela e clique na aba "Resultado".
     ''')
+  #______________________________________________________________________________________________________________________________________________________________________________________________________
   
-  #Coluna dos botões de ajuda______________________________________________________________________________________________________
+  
+  #Coluna dos botões de ajuda_____________________________________________________________________________________________________________________________________________________________________________
   with ajuda:              #A coluna ajuda está organizada com as descrições das variáveis necessárias para o dimensionamento.
     st.markdown(''' 
     ###### Sobre o Método:
@@ -140,9 +145,6 @@ with entrada:
     ''')
     if st.button("?", type="primary", key="Temperatura"):
       st.write("Temperatura média do local da instalação, ou mesmo da sua região/cidade.")
-      
-    
-  
 #______________________________________________________________________________________________________________________________________________________________________________
 
 
@@ -172,4 +174,4 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm², nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
 
   ''') 
-  # O resultado ainda é apenas um teste 
+  # __________________________________________________________________________________________________________________________________________________________________________________________________
