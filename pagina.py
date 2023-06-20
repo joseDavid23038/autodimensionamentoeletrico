@@ -2,7 +2,8 @@
 import streamlit as st
 #Importando funcoes.py
 import os
-print(os.listdir())
+import pandas as pd
+pd.readexcel(os.listdir())
 
 from funcoes import *
 
