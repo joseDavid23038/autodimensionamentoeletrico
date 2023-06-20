@@ -1,6 +1,9 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
 import streamlit as st
 #Importando funcoes.py
+import os
+import pandas as pd
+
 from funcoes import *
 
 # Configurando a Página_______________________________________________________________________________________________________________________________________________________
@@ -14,9 +17,9 @@ bar = st.sidebar
 bar.title("Contato:") #Adicionamos o contato para que o usuário possa sanar suas dúvidas, além da página do github para que possa ver como o código foi estruturado
 bar.write('''
 Envie suas dúvidas ou sugestões para nós por e-mail!
-Houve algum erro durante a utilização? Nos informe.
+Houve algum erro durante a utilização? Nos informe. \n  
 e-mails para contato: 
-danielbravin@hotmail.com
+[Daniel]'danielbravin@hotmail.com'
 emelyn.a.ilum@gmail.com
 programming.gustamatos@gmail.com 
 jose23038@ilum.cnpem.br
@@ -72,13 +75,20 @@ with entrada:
   #Coluna das variáveis__________________________________________________________________________________________________________
   with variaveis:
     metodo = st.selectbox("Método de Instalação:", ["A1","A2", "B1","B2", "C", "D"]) #Cria uma caixa de seleção com os tipos de métodos de instalação dos circuitos (6 possíveis escolhas)
+    tipo_instalacao = st.selectbox("Tipo de Instalação:", ["Iluminação","Tomadas de Uso Específico", "Tomadas de Uso Geral"]) #Cria uma caixa de seleção com os tipos de instalação dos circuitos (3 possíveis escolhas)
     tensao = st.selectbox("Tensão:", [127, 220, 380]) #Cria uma caixa de seleção com as tensões possíveis para os circuitos (3 possíveis escolhas)
     potencia = st.number_input("Potência Total do Circuito:", min_value=60, max_value=8500, value=2000) #Cria uma entrada para números inteiros que variam de 60 a 8500, sendo o valor padrão: 2000 (valores de potência total)
     num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5) #Cria uma entrada para números inteiros que variam de 1 a 30, sendo o padrão: 5 (números de circuitos em um mesmo eletroduto) 
     isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"]) #Cria uma caixa de selação com os tipos de isolamentos possíveis: PVC, XLPE e EPR (3 possíveis escolhas)
     local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"]) #Cria uma caixa de seleção com o local de instalação possível: Parede, chão ou teto (3 possíveis escolhas)
-    temperatura = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
+    temperatura_ambiente = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
+
+    st.divider() 
     
+    st.markdown('''
+    ##### Para visualizar seu resultado suba a tela e clique na aba "Resultado".
+    ''')
+  
   #Coluna dos botões de ajuda______________________________________________________________________________________________________
   with ajuda:              #A coluna ajuda está organizada com as descrições das variáveis necessárias para o dimensionamento.
     st.markdown(''' 
@@ -88,7 +98,14 @@ with entrada:
       st.write("O Método de referência é o modo de instalação do seu circuito.")
       st.image("https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg")
       st.markdown("Caso ainda haja dúvidas, consulte o material-guia: [NBR5410](https://docente.ifrn.edu.br/jeangaldino/disciplinas/2015.1/instalacoes-eletricas/nbr-5410?page=30) (Informações sobre os tipos de métodos se encontram a partir da página 98)")
+
+    st.markdown(''' 
+    ###### Sobre o Tipo de Instalação:
+    ''')
+    if st.button("?", type="primary", key="Instalação"):
+      st.write(" Tipo de Instalação é referente em ultima instância ao uso do circuito, sendo para instalação de lampadas (Iluminação) ou para instalação de tomadas de uso Geral ou Específico (Aparelhos que utilizam mais de 10 A).")
       
+    
     st.markdown(''' 
     ###### Sobre a Tensão:
     ''')
@@ -137,11 +154,22 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   Aqui estão o disjuntor mais adequado e a seção transversal ideal do fio para seu sistema!
   A segurança vem sempre em primeiro lugar, portanto lembre-se de consultar um profissional. 
 
-  """)
-  disjuntor_inicial = disjuntor_inicial(potencia,tensao)
-  corrente = int(potencia/tensao)
+  """) 
+   # Abaixo estamos definindo algumas outras variaveis usando as funções importadas do "funcoes.py" e da aba "entrada".
+  disjuntores = tabela_disjuntores
+  condicao = condicao_de_instalacao(isolamento,local)
+  disjuntor = disjuntor_inicial(potencia, tensao, disjuntores)
+  ftemperatura = fator_temperatura(condicao, temperatura_ambiente)
+  agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos = tabela_agrupamento)
+  correcao = fator_correcao(agrupamento, ftemperatura)
+  bitola_mn = bitola_min(tipo_instalacao)
+  secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
+
+  # Abaixo é a caixa de texto que irá conter os valores de retorno e finais do nosso codigo, capacidade do disjuntor e seção do fio. 
   st.markdown(f'''
-  #### A corrente mínima que o disjuntor precisa aguentar: {disjuntor_inicial}
+  #### O disjuntor ideal para esse circuito deve ser de {int(disjuntor)} A.
   
+  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm², nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
+
   ''') 
   # O resultado ainda é apenas um teste 
