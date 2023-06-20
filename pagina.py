@@ -83,6 +83,8 @@ with entrada:
     local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"]) #Cria uma caixa de seleção com o local de instalação possível: Parede, chão ou teto (3 possíveis escolhas)
     temperatura_ambiente = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
 
+    st.divider() 
+    
     st.markdown('''
     ##### Para visualizar seu resultado suba a tela e clique na aba "Resultado".
     ''')
