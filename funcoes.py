@@ -105,7 +105,7 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     """
     tabela_usada = tabela_a_ser_usada(isolamento)
     if tabela_usada == "DOIS_COBRE_PVC.xlsx":
-        tabela = pd.read_excel("Dados\DISJUNTORES.xlsx")
+        tabela = pd.read_excel("Dados\DOIS_COBRE_PVC.xlsx")
     if tabela_usada == "DOIS_COBRE_EPR_XLPE.xlsx":
         tabela = pd.read_excel("Dados\DOIS_COBRE_EPR_XLPE.xlsx")
     bit = 'SEÇÃO'
@@ -143,6 +143,6 @@ if __name__ == "__main__":
     correcao = fator_correcao(agrupamento, ftemperatura)
     bitola_mn = bitola_min(tipo_instalacao)
     secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
-    print(secao)
+    print(secao[0])
 
     
