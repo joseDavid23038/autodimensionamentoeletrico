@@ -1,13 +1,8 @@
 import pandas as pd
 import numpy as np
-import os
-import pip 
-arr = str(os.listdir('Dados'))
-# pd.read_excel(arr)
-pip.main(['install', 'openpyxl'])
 
-tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
 tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
+tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
 tabela_temperatura = pd.read_excel("Dados/TEMPERATURA.xlsx")
 
 def condicao_de_instalacao(isolamento,local):
@@ -117,13 +112,16 @@ def bitola(disjuntor, bitola_min, metodo, correcao, isolamento):
     I_max = correcao * tabela[metodo].values
     fios = tabela[bit].values
     finais = []
-    for valor in I_max:
+    for valor, secao in zip(I_max, fios):
         if valor > disjuntor:
             finais.append(valor)
-            break
-    for valor in fios:
-        if valor >= bitola_min:
-            finais.append(valor)
+            if secao >= bitola_min:
+                finais.append(secao)
+            else:
+                for valor in fios:
+                    if valor >= bitola_min:
+                        finais.append(valor)
+                        break
             break
     return finais
 
@@ -146,8 +144,7 @@ if __name__ == "__main__":
     ftemperatura = fator_temperatura(condicao, temperatura_ambiente)
     agrupamento = fator_agrupamento(num_circuitos, metodo, agrupamentos = tabela_agrupamento)
     correcao = fator_correcao(agrupamento, ftemperatura)
+    print(correcao)
     bitola_mn = bitola_min(tipo_instalacao)
     secao = bitola(disjuntor, bitola_mn, metodo, correcao, isolamento)
-    print(secao[0])
-
-    
+    print(secao[1])
