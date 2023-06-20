@@ -92,7 +92,14 @@ with entrada:
       st.write("O Método de referência é o modo de instalação do seu circuito.")
       st.image("https://raw.githubusercontent.com/emelyn23017/autodimensionamentoeletrico/main/Imagens/M%C3%A9todos%20de%20refer%C3%AAncia%20ABNT%20NBR5410.jpg")
       st.markdown("Caso ainda haja dúvidas, consulte o material-guia: [NBR5410](https://docente.ifrn.edu.br/jeangaldino/disciplinas/2015.1/instalacoes-eletricas/nbr-5410?page=30) (Informações sobre os tipos de métodos se encontram a partir da página 98)")
+
+    st.markdown(''' 
+    ###### Sobre o Tipo de Instalação:
+    ''')
+    if st.button("?", type="primary", key="Instalação"):
+      st.write(" Tipo de Instalação é referente em ultima instância ao uso do circuito, sendo para insatalação de lampadas (Iluminação), para instalação de tomadas de uso Geral ou uso Específico (Aparelhos que utilizam mais de 10 A)).")
       
+    
     st.markdown(''' 
     ###### Sobre a Tensão:
     ''')
