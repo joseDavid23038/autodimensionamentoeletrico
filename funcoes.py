@@ -1,14 +1,14 @@
-import pandas as pd
-import numpy as np
+import pandas as pd #importa a biblioteca pandas (utilizada para analisar e organizar os dados)
+import numpy as np #importa a biblioteca numpy (utilizada para realizar os cálculos necessários para o dimensionamento elétrico)
 
-import pip
-pip.main(["install", "openpyxl"])
+import pip #importa o pip, um gerenciador das bibliotecas que iremos utilizar
+pip.main(["install", "openpyxl"]) #instala a biblioteca openpyxl, que consegue acessar, ler e criar arquivos .xlsx (Excel)
 
-tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
-tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
-tabela_temperatura = pd.read_excel("Dados/TEMPERATURA.xlsx")
+tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx") #acessa, por meio da biblioteca pandas, a tabela com os dados sobre disjuntores
+tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx") #acessa, por meio da biblioteca pandas, a tabela com os dados sobre o agrupamento de fios
+tabela_temperatura = pd.read_excel("Dados/TEMPERATURA.xlsx") #acessa, por meio da biblioteca pandas, a tabela com os dados sobre a temperatura do ambiente
 
-def condicao_de_instalacao(isolamento,local):
+def condicao_de_instalacao(isolamento,local): 
     if isolamento == "PVC" and (local == "Teto" or local =="Parede"):
        condicao = 'PVCAMBIENTE'
     if isolamento == "PVC" and local == "Solo":
@@ -29,29 +29,30 @@ def tabela_a_ser_usada(isolamento):
 
 def disjuntor_inicial(P, V, disjuntores = tabela_disjuntores):
     """
-    args:
+    Calcula o valor da intensidade de corrente. 
+    Args:
         P: Potência 
         V: Tensão
-        disjuntores: A tabela de disjuntores a ser usada na análise (opcional)
-    returns: 
+        Disjuntores: A tabela de disjuntores a ser usada na análise (opcional)
+    Returns: 
         O disjuntor adequado para as condições especificadas.
     """
-    I = P/V
-    for linha in disjuntores.itertuples():
-        coluna = "DISJUNTOR"
-        if getattr(linha, coluna) > I:
-            return getattr(linha, coluna)
+    I = P/V #Calcula a intensidade de corrente (I), a partir dos argumentos P e V dados pelo usuário
+    for linha in disjuntores.itertuples(): #Itera a tabela de disjuntores pelo método .itertuples()
+        coluna = "DISJUNTOR" 
+        if getattr(linha, coluna) > I: #O método getattr analisa os valores da tabela. Se o valor obtido através da tabela for maior que o I
+            return getattr(linha, coluna) #Retorna o disjuntor adequado
 
 
 
 # def dimensionar(tabela, metodo = 'B1', Bitola_min = 2.5, FT = 0.5, P = 1550, V = 220):
 def fator_temperatura(condicao, temperatura_ambiente, temperaturas = tabela_temperatura):
     """
-    args:
+    Args:
         condicao: Condição de instalação
         temperatura_ambiente: Temperatura média do amibiente. 
         temperaturas: A tabela de temperatura a ser usada na análise.
-    returns: 
+    Returns: 
         Fator de temperatura.
     """
     for temperatura in temperaturas.itertuples():
@@ -62,21 +63,21 @@ def fator_temperatura(condicao, temperatura_ambiente, temperaturas = tabela_temp
 
 def fator_agrupamento(n_circuitos, metodo, agrupamentos = tabela_agrupamento):
     """
-    args:
+    Args:
         n_circuitos: Número de circuitos a serem considerados.
         Método: Método de instalação usado.
         agrupamentos: A tabela de agrupamento a ser usada na análise.
-    returns: 
+    Returns: 
         Fator de temperatura.
     """
     return agrupamentos.loc[n_circuitos+1][metodo]
 
 def fator_correcao(agrupamento, temperatura):
     """
-    args:
+    Args:
         agrupamento: O fator de agrupamento.
         temperatura: O fator de temperatura
-    returns: 
+    Returns: 
         Fator de agrupamento.
     """
     return agrupamento*temperatura
