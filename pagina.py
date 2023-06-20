@@ -155,7 +155,7 @@ with saida:   #A aba de Resultados apresenta os resultados a partir das funçõe
   st.markdown(f'''
   #### O disjuntor ideal para esse circuito deve ser de {int(disjuntor)} A.
   
-  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm, nas condições selecionadas esse condutor suporta uma corrente aproximadad de : {int(secao[0])} A sem aquecer.
+  #### A seção transversal do seu fio deve ser igual ou superior a: {secao[1]} mm, nas condições selecionadas esse condutor suporta uma corrente aproximadamente : {int(secao[0])} A sem aquecer.
 
   ''') 
   # O resultado ainda é apenas um teste 
