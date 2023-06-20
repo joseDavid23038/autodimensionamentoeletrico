@@ -3,7 +3,9 @@ import streamlit as st
 #Importando funcoes.py
 import os
 import pandas as pd
-pd.readexcel(os.listdir())
+
+arr = os.listdir()
+pd.read_excel(arr)
 
 from funcoes import *
 
