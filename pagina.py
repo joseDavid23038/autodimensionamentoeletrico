@@ -97,7 +97,7 @@ with entrada:
     ###### Sobre o Tipo de Instalação:
     ''')
     if st.button("?", type="primary", key="Instalação"):
-      st.write(" Tipo de Instalação é referente em ultima instância ao uso do circuito, sendo para insatalação de lampadas (Iluminação), para instalação de tomadas de uso Geral ou uso Específico (Aparelhos que utilizam mais de 10 A.")
+      st.write(" Tipo de Instalação é referente em ultima instância ao uso do circuito, sendo para instalação de lampadas (Iluminação) ou para instalação de tomadas de uso Geral ou Específico (Aparelhos que utilizam mais de 10 A).")
       
     
     st.markdown(''' 
