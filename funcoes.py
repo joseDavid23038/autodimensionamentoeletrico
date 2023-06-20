@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 
+arr = str(os.listdir('Dados'))
+pd.read_excel(arr)
+
+
 tabela_agrupamento = pd.read_excel("Dados\AGRUPAMENTO.xlsx")
 tabela_disjuntores = pd.read_excel("Dados\DISJUNTORES.xlsx")
 tabela_temperatura = pd.read_excel("Dados\TEMPERATURA.xlsx")
