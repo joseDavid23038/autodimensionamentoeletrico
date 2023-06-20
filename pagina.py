@@ -81,7 +81,7 @@ with entrada:
     num_circuitos = st.number_input("Circuitos no mesmo eletroduto:", min_value=1, max_value=30, value=5) #Cria uma entrada para números inteiros que variam de 1 a 30, sendo o padrão: 5 (números de circuitos em um mesmo eletroduto) 
     isolamento = st.selectbox("Tipo de Isolamento:", ["PVC","XLPE","EPR"]) #Cria uma caixa de selação com os tipos de isolamentos possíveis: PVC, XLPE e EPR (3 possíveis escolhas)
     local = st.selectbox("Local de Instalação:", ["Parede","Chão","Teto"]) #Cria uma caixa de seleção com o local de instalação possível: Parede, chão ou teto (3 possíveis escolhas)
-    temperatura = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
+    temperatura_ambiente = st.slider("Temperatura:", min_value=0, max_value=50, value=25) #Cria uma barra de correr com os valores para a temperatura, que varia de 0 a 50, com valor padrão de 25
     
   #Coluna dos botões de ajuda______________________________________________________________________________________________________
   with ajuda:              #A coluna ajuda está organizada com as descrições das variáveis necessárias para o dimensionamento.
