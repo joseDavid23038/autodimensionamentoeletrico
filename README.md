@@ -2,7 +2,7 @@
 *Autores:* Daniel Bravin, Emelyn Alves, Gustavo Matos, José David Alves.  
 
 #### Descrição geral: 
-O código 'funcoes.py' utiliza as variáveis dadas como coordenadas para encontrar valores em tabelas através da biblioteca pandas. Já o código 'página.py', é onde estão as configurações da interface que utilizamos, além disso, ele se comunica com o código 'funcoes.py', *retornando o disjuntor e a seção tranversal do fio para utilizar no dimensionamento elétrico residencial.* 
+O código 'funcoes.py' utiliza as variáveis dadas como coordenadas para encontrar valores em tabelas através da biblioteca pandas. Já o código 'página.py', é onde estão as configurações da interface que utilizamos, além disso, ele se comunica com o código 'funcoes.py', *retornando o disjuntor e a seção tranversal do fio para utilizar no dimensionamento elétrico residencial.* A pasta Notebook contém os primeiros testes não tão bem organizados do código que apenas serve como marco do funcionamento do sistema. 
 Link do Streamlit: https://emelyn23017-autodimensionamentoeletrico-pagina-ijjg9l.streamlit.app/ 
 
 #### Introdução: 
