@@ -17,9 +17,9 @@ bar = st.sidebar
 bar.title("Contato:") #Adicionamos o contato para que o usuário possa sanar suas dúvidas, além da página do github para que possa ver como o código foi estruturado
 bar.write('''
 Envie suas dúvidas ou sugestões para nós por e-mail!
-Houve algum erro durante a utilização? Nos informe.
+Houve algum erro durante a utilização? Nos informe. \n  
 e-mails para contato: 
-danielbravin@hotmail.com
+[Daniel]'danielbravin@hotmail.com'
 emelyn.a.ilum@gmail.com
 programming.gustamatos@gmail.com 
 jose23038@ilum.cnpem.br
