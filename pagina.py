@@ -1,4 +1,5 @@
 #Importando Bibliotecas____________________________________________________________________________________________________________________________________________________________
+pip install openpyxl
 import streamlit as st
 #Importando funcoes.py
 import os
