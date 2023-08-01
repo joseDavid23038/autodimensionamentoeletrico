@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+arr = str(os.listdir('Dados'))
+# pd.read_excel(arr)
+pip.main(['install', 'openpyxl'])
 
 
 tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
