@@ -1,5 +1,4 @@
-#pip install openpyxl
-
+pip install pandas --upgrade
 import pandas as pd
 import numpy as np
 
