@@ -5,7 +5,7 @@ import pip
 import openpyxl
 
 arr = str(os.listdir('Dados'))
-# pd.read_excel(arr)
+ pd.read_excel(arr)
 pip.main(['install', 'openpyxl'])
 
 
