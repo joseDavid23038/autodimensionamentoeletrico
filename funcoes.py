@@ -5,7 +5,7 @@ import pip
 arr = str(os.listdir('Dados'))
 # pd.read_excel(arr)
 pip.main(['install', 'openpyxl'])
-pip install openpyxl
+#pip install openpyxl
 
 tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
 tabela_agrupamento = pd.read_excel("Dados/AGRUPAMENTO.xlsx")
