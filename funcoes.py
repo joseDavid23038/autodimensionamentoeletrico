@@ -7,7 +7,6 @@ import openpyxl
 arr = str(os.listdir('Dados'))
 # pd.read_excel(arr)
 pip.main(['install', 'openpyxl'])
-pip install openpyxl --upgrade
 
 
 tabela_disjuntores = pd.read_excel("Dados/DISJUNTORES.xlsx")
